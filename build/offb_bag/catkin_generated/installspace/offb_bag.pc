@@ -1,0 +1,8 @@
+prefix=/home/xxx/LidarDronevoid/install
+
+Name: offb_bag
+Description: Description of offb_bag
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

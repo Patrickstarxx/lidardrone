@@ -1,0 +1,8 @@
+prefix=/home/xxx/LidarDronevoid/devel
+
+Name: msg
+Description: Description of msg
+Version: 0.0.0
+Cflags: -I/home/xxx/LidarDronevoid/devel/include
+Libs: -L${prefix}/lib 
+Requires: roscpp std_msgs message_runtime

@@ -1,0 +1,8 @@
+prefix=/home/xxx/LidarDronevoid/install
+
+Name: cam
+Description: Description of cam
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: roscpp rospy geometry_msgs std_msgs
