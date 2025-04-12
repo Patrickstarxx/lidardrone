@@ -26,15 +26,15 @@
 #define VELOCITY2D_CONTROL 0b101111000111 //设置好对应的掩码，从右往左依次对应PX/PY/PZ/VX/VY/VZ/AX/AY/AZ/FORCE/YAW/YAW-RATE
 //设置掩码时注意要用的就加上去，用的就不加，这里是用二进制表示，我需要用到VX/VY/VZ/YAW，所以这四个我给0，其他都是1.
 bool allow_yaw = false;//如果不想要机头转动，则把这个设置为false，专门适配于雷达用的
-bool have_cam = false;
+bool have_cam = false;//检测摄像头信号
 static ros::Time last_cam_time;
-const double kp = 0.3;        // 比例系数
-const double ki = 0.05;       // 积分系数
-const double kd = 0.1;        // 微分系数
-const double max_speed = 1.5; // 最大速度
-float dt=0.02;
-    double integral = 0.0;    // 积分项
-    double prev_error = 0.0;  // 上次误差
+const double kp = 0.1;        // 比例系数
+const double ki = 0.03;       // 积分系数
+const double kd = 0.07;        // 微分系数
+const double max_speed = 1.0; // 最大速度
+float dt=0.02; //运行时间
+double integral = 0.0;    // 积分项
+double prev_error = 0.0;  // 上次误差
 
 template<typename T>
 T clamp(const T& value, const T& min_val, const T& max_val) {
@@ -42,7 +42,7 @@ T clamp(const T& value, const T& min_val, const T& max_val) {
             ((value > max_val) ? max_val : value);
 }
 
-double pid_calculate(double current_error,double kp, double ki, double kd,double max_speed,double integral, double prev_error,double dt = 1.0);
+double pid_calculate(double current_error,double kp, double ki, double kd,double max_speed,double integral, double prev_error,double dt);
 class Ctrl
 {
     public:
@@ -66,7 +66,7 @@ class Ctrl
         mavros_msgs::RCIn rc;
         nav_msgs::Odometry position_msg;
         geometry_msgs::PoseStamped target_pos;
-        mavros_msgs::PositionTarget takeoff_pos;
+        //mavros_msgs::PositionTarget takeoff_pos;
         mavros_msgs::State current_state;
         geometry_msgs::Vector3 cam_target;
         float position_x, position_y, position_z, now_x, now_y, now_yaw, current_yaw, targetpos_x, targetpos_y;
@@ -165,12 +165,12 @@ void Ctrl::twist_cb(const quadrotor_msgs::PositionCommand::ConstPtr& msg)//ego�
 
 void Ctrl::control(const ros::TimerEvent&)
 {
-   /*  if(!have_odom)
+    if(!have_odom)
     {
         std::cout<<"---------------no odom!!-------------"<<std::endl;
         return;
-    } */
-/*     if(!FCUready())
+    }
+    if(!FCUready())
     {
         std::cout<<"---------------FCU NOT READY!!-------------"<<std::endl;
         //NAV_MODE.nav_mode=NAV_MODE::NAV_MODE_EMPTY;
@@ -184,8 +184,8 @@ void Ctrl::control(const ros::TimerEvent&)
         ROS_INFO("发送空指令\n");
         local_pos_pub.publish(current_goal); 
         return;
-    } */
-    NAV_MODE.nav_mode= NAV_MODE.CAM_TARGET;
+    }
+    //NAV_MODE.nav_mode= NAV_MODE.CAM_TARGET;//调试
     switch (NAV_MODE.nav_mode)
     {
         
@@ -214,8 +214,6 @@ void Ctrl::control(const ros::TimerEvent&)
         break;
         case NAV_MODE.CAM_TARGET:
         {
-
-            
             current_goal.coordinate_frame = mavros_msgs::PositionTarget::FRAME_LOCAL_NED;//选择local系，一定要local系
             current_goal.header.stamp = ros::Time::now();
             current_goal.type_mask = velocity_mask;//这个就算对应的掩码设置，可以看mavros_msgs::PositionTarget消息格式
@@ -255,6 +253,7 @@ void Ctrl::control(const ros::TimerEvent&)
         case NAV_MODE.LAND://降落
         {
             offb_set_mode.request.custom_mode = "AUTO.LAND";
+            ROS_INFO("LAND");
             if (current_state.mode != "AUTO.LAND" )// && (ros::Time::now() - last_request > ros::Duration(5.0))
             {
                 if (set_mode_client.call(offb_set_mode) && offb_set_mode.response.mode_sent)
@@ -268,7 +267,7 @@ void Ctrl::control(const ros::TimerEvent&)
         case NAV_MODE.TAKEOFF:
         {
             ROS_INFO("起飞");
-            takeoff_pos.type_mask =
+            current_goal.type_mask =
             mavros_msgs::PositionTarget::IGNORE_VX  |
             mavros_msgs::PositionTarget::IGNORE_VY  |
             mavros_msgs::PositionTarget::IGNORE_VZ  |
@@ -277,10 +276,10 @@ void Ctrl::control(const ros::TimerEvent&)
             mavros_msgs::PositionTarget::IGNORE_AFZ |
             mavros_msgs::PositionTarget::IGNORE_YAW |
             mavros_msgs::PositionTarget::IGNORE_YAW_RATE;
-            takeoff_pos.position.x=now_x;
-            takeoff_pos.position.y=now_y;
-            takeoff_pos.position.z=1.5;
-            local_pos_pub.publish(takeoff_pos);
+            current_goal.position.x=now_x;
+            current_goal.position.y=now_y;
+            current_goal.position.z=1.5;
+            //local_pos_pub.publish(takeoff_pos);
         }
         break;
         default:

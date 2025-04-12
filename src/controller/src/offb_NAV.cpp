@@ -78,7 +78,7 @@ void rviz_goal_cb(const geometry_msgs::PoseStampedPtr &msg)
    {
 	IS_RVIZ_GOAL = rviz_goal.header.seq;
    }
-   if(IS_RVIZ_GOAL == rviz_goal.header.seq)
+   if(IS_RVIZ_GOAL == rviz_goal.header.seq && takeoff_done)
    {
 	NWTS.nav_waypoint_type_switch = NWTS.NAV_WYPT_RVIZ;
 	ROS_ERROR("IS_RVIZ=SEQ");
@@ -223,9 +223,9 @@ void local_vel_cb(const geometry_msgs::TwistStamped::ConstPtr& msg)
 void cam_target_cb(const geometry_msgs::Vector3::ConstPtr& msg)
 {
 	cam_target = *msg;
-	if(!cam_target_reached)
+	if(!cam_target_reached && takeoff_done )
 	{
-		NWM.nav_mode = NWM.CAM_TARGET;
+		NWTS.nav_waypoint_type_switch = NWTS.NAV_WYPT_CAM;
 	}
 	
 }
@@ -273,17 +273,8 @@ int main(int argc, char **argv)
     offb_set_mode.request.custom_mode = "OFFBOARD";
     mavros_msgs::CommandBool arm_cmd;
     arm_cmd.request.value = true;
+	
 
-	//NWTS.nav_waypoint_type_switch=NWTS.NAV_WYPT_PRESET;
-
-/* 	while(!takeoff_done)
-	{
-		if(FCUready() && !takeoff_done)//检测飞控状态，进入预设导航点模式
-		{
-			//NWTS.nav_waypoint_type_switch=NWTS.NAV_WYPT_PRESET;
-			NWTS.nav_waypoint_type_switch = NWTS.NAV_WYPT_TAKEOFF;
-		}
-	} */
     while(ros::ok())
 	{
 
@@ -327,8 +318,6 @@ int main(int argc, char **argv)
 				if(_WayPoints.header.frame_id !="invalid")
 				{
 					ROS_WARN("%d",_WayPoints.header.seq);
-					//sleep(5000);
-					
 					nav_goal_pb.publish(_WayPoints);//发布预设导航点
 					ROS_INFO("sent_num=%d",num_cnt_);
 					num_cnt_++;
@@ -349,17 +338,21 @@ int main(int argc, char **argv)
 			ROS_INFO("IS_RVIZ_=%d",IS_RVIZ_GOAL);
 			NWTS.nav_waypoint_type_switch=NWTS.NAV_WYPT_PRESET;//回到预设导航点模式
 			break;
-		case NWTS.NAV_WYPT_CAM://返回起飞点并降落
+		case NWTS.NAV_WYPT_CAM://摄像头目标
 			NWM.nav_mode = NWM.CAM_TARGET;
 			nav_wypt_mode_pb.publish(NWM);
-			if(abs(cam_target.x)<=100 && abs(cam_target.y)<=100)
+			ROS_INFO("CAM.x=%f",cam_target.x);
+			ROS_INFO("CAM.y=%f",cam_target.y);
+			if(abs(cam_target.x)<=0.2 && abs(cam_target.y)<=0.2)
 			{
-				NWM.nav_mode = NWM.TRAJ_TRACK;
+				//NWTS.nav_waypoint_type_switch = NWTS.NAV_WYPT_PRESET;
 				ROS_WARN("CAM_ATRGET REACHED");
 				cam_target_reached=true;
+				NWTS.nav_waypoint_type_switch = NWTS.NAV_WYPT_LAND;
 			}
 		break;
 		case NWTS.NAV_WYPT_LAND:   // 降落
+			ROS_WARN("LANDING");
 			NWM.nav_mode = NWM.LAND;
 			nav_wypt_mode_pb.publish(NWM);
 			break;
