@@ -29,7 +29,10 @@ class CameraDistanceEstimator:
         if not self.cap.isOpened():
             rospy.logerr("无法打开摄像头!")
             return
-
+        elif self.cap.isOpened():
+            rospy.logerr("摄像头已上线!")
+        self.cap.set(3,640)
+        self.cap.set(4,480)
         # 颜色阈值
         """self.lower_red = (0, 119, 178)
         self.upper_red = (21, 208, 255) """
@@ -83,6 +86,7 @@ class CameraDistanceEstimator:
         
         while not rospy.is_shutdown():
             ret, frame = self.cap.read()
+            
             if not ret:
                 rospy.logwarn_throttle(5, "摄像头信号丢失")
                 continue
@@ -102,21 +106,19 @@ class CameraDistanceEstimator:
                 self.pub.publish(Vector3(x=dist_y, y=dist_x, z=h))
                 
                 # 绘制界面
-                cv2.circle(frame, (cx, cy), 8, (0, 255, 0), -1)
-                cv2.putText(frame, f"X:{dist_y:.2f}m Y:{dist_x:.2f}m", (10,30), 
-                          cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0,255,0), 2)
-                cv2.putText(frame, f"Height:{h:.2f}m", (10,60),
-                          cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0,255,0), 2)
+                #cv2.circle(frame, (cx, cy), 8, (0, 255, 0), -1)
+                #cv2.putText(frame, f"X:{dist_y:.2f}m Y:{dist_x:.2f}m", (10,30), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0,255,0), 2)
+                #cv2.putText(frame, f"Height:{h:.2f}m", (10,60),cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0,255,0), 2)
             
             # 显示结果
-            cv2.imshow("Distance Estimation", frame)
+            #cv2.imshow("Distance Estimation", frame)
             if cv2.waitKey(1) == 27:
                 break
             
             rate.sleep()
         
         self.cap.release()
-        cv2.destroyAllWindows()
+        #cv2.destroyAllWindows()
 
 if __name__ == "__main__":
     try:
