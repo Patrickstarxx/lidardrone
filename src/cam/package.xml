@@ -13,7 +13,14 @@
   <depend>rospy</depend>
   <depend>geometry_msgs</depend>
   <depend>std_msgs</depend>
-
+  <depend>cv_bridge</depend>
+  <depend>sensor_msgs</depend>
+  <depend>image_transport</depend>
+  <build_depend>opencv2</build_depend>
+  <exec_depend>opencv2</exec_depend>
+  <build_depend>eigen</build_depend>
+  <exec_depend>eigen</exec_depend>
+  
   <export>
   </export>
 </package>
