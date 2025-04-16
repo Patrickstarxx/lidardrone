@@ -1,8 +1,0 @@
-prefix=/home/jane/lidardrone/install
-
-Name: msg
-Description: Description of msg
-Version: 0.0.0
-Cflags: -I${prefix}/include
-Libs: -L${prefix}/lib 
-Requires: roscpp std_msgs message_runtime

@@ -1,2 +1,0 @@
-set(msg_MESSAGE_FILES "msg/NAV_WYPT_MODE.msg;msg/NAV_WYPT_TYPE_SWITCH.msg")
-set(msg_SERVICE_FILES "")
