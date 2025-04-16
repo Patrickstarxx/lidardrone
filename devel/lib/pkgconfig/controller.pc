@@ -1,8 +1,0 @@
-prefix=/home/jane/lidardrone/devel
-
-Name: controller
-Description: Description of controller
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: msg geometry_msgs tf xmlrpcpp
