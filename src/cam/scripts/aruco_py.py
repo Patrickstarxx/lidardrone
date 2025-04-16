@@ -29,9 +29,9 @@ class ArucoDroneLanding:
         self.image_center = (240, 320)  # 图像中心 (cx, cy)
         self.fx=376.95550496;
         self.fy=375.83052548;
-        self.camera_matrix = np.array([[376.95550496, 0, 339.81441879],
-        				[0, 375.83052548, 222.7750962],
-        				[0, 0, 1]], dtype=np.float32)
+        self.camera_matrix = np.array([ [341.91275249, 0, 326.11605895],
+        				                [0, 341.07830571, 240.98064699],
+    	        			            [0, 0, 1]], dtype=np.float32)
         self.dist_coeffs = np.zeros((4, 1))  # 假设畸变系数为零
         
         # Aruco字典
