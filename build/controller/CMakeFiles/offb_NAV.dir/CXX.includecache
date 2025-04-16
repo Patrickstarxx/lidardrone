@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/xxx/LidarDronevoid/devel/include/msg/NAV_WYPT_MODE.h
+/home/jane/lidardrone/devel/include/msg/NAV_WYPT_MODE.h
 string
 -
 vector
@@ -22,7 +22,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/xxx/LidarDronevoid/devel/include/msg/NAV_WYPT_TYPE_SWITCH.h
+/home/jane/lidardrone/devel/include/msg/NAV_WYPT_TYPE_SWITCH.h
 string
 -
 vector
@@ -38,7 +38,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/xxx/LidarDronevoid/src/controller/src/offb_NAV.cpp
+/home/jane/lidardrone/src/controller/src/offb_NAV.cpp
 ros/ros.h
 -
 geometry_msgs/PoseStamped.h

@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/xxx/LidarDronevoid/devel/include/quadrotor_msgs/AuxCommand.h
+/home/jane/lidardrone/devel/include/quadrotor_msgs/AuxCommand.h
 string
 -
 vector
@@ -22,7 +22,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/xxx/LidarDronevoid/devel/include/quadrotor_msgs/Gains.h
+/home/jane/lidardrone/devel/include/quadrotor_msgs/Gains.h
 string
 -
 vector
@@ -38,7 +38,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/xxx/LidarDronevoid/devel/include/quadrotor_msgs/SO3Command.h
+/home/jane/lidardrone/devel/include/quadrotor_msgs/SO3Command.h
 string
 -
 vector
@@ -62,7 +62,7 @@ geometry_msgs/Quaternion.h
 quadrotor_msgs/AuxCommand.h
 -
 
-/home/xxx/LidarDronevoid/devel/include/quadrotor_msgs/TRPYCommand.h
+/home/jane/lidardrone/devel/include/quadrotor_msgs/TRPYCommand.h
 string
 -
 vector
@@ -82,9 +82,9 @@ std_msgs/Header.h
 quadrotor_msgs/AuxCommand.h
 -
 
-/home/xxx/LidarDronevoid/src/planner/utils/quadrotor_msgs/include/quadrotor_msgs/comm_types.h
+/home/jane/lidardrone/src/planner/utils/quadrotor_msgs/include/quadrotor_msgs/comm_types.h
 
-/home/xxx/LidarDronevoid/src/planner/utils/quadrotor_msgs/include/quadrotor_msgs/encode_msgs.h
+/home/jane/lidardrone/src/planner/utils/quadrotor_msgs/include/quadrotor_msgs/encode_msgs.h
 stdint.h
 -
 vector
@@ -96,9 +96,9 @@ quadrotor_msgs/TRPYCommand.h
 quadrotor_msgs/Gains.h
 -
 
-/home/xxx/LidarDronevoid/src/planner/utils/quadrotor_msgs/src/encode_msgs.cpp
+/home/jane/lidardrone/src/planner/utils/quadrotor_msgs/src/encode_msgs.cpp
 quadrotor_msgs/encode_msgs.h
-/home/xxx/LidarDronevoid/src/planner/utils/quadrotor_msgs/src/quadrotor_msgs/encode_msgs.h
+/home/jane/lidardrone/src/planner/utils/quadrotor_msgs/src/quadrotor_msgs/encode_msgs.h
 quadrotor_msgs/comm_types.h
 -
 

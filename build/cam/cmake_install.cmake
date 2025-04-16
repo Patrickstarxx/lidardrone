@@ -1,8 +1,8 @@
-# Install script for directory: /home/xxx/LidarDronevoid/src/cam
+# Install script for directory: /home/jane/lidardrone/src/cam
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/xxx/LidarDronevoid/install")
+  set(CMAKE_INSTALL_PREFIX "/home/jane/lidardrone/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,24 +38,24 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/xxx/LidarDronevoid/build/cam/catkin_generated/installspace/cam.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/jane/lidardrone/build/cam/catkin_generated/installspace/cam.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cam/cmake" TYPE FILE FILES
-    "/home/xxx/LidarDronevoid/build/cam/catkin_generated/installspace/camConfig.cmake"
-    "/home/xxx/LidarDronevoid/build/cam/catkin_generated/installspace/camConfig-version.cmake"
+    "/home/jane/lidardrone/build/cam/catkin_generated/installspace/camConfig.cmake"
+    "/home/jane/lidardrone/build/cam/catkin_generated/installspace/camConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cam" TYPE FILE FILES "/home/xxx/LidarDronevoid/src/cam/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cam" TYPE FILE FILES "/home/jane/lidardrone/src/cam/package.xml")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cam" TYPE PROGRAM FILES
-    "/home/xxx/LidarDronevoid/src/cam/scripts/camera_error_publisher.py"
-    "/home/xxx/LidarDronevoid/src/cam/scripts/cam_target_distpub.py"
+    "/home/jane/lidardrone/src/cam/scripts/camera_error_publisher.py"
+    "/home/jane/lidardrone/src/cam/scripts/cam_target_distpub.py"
     )
 endif()
 

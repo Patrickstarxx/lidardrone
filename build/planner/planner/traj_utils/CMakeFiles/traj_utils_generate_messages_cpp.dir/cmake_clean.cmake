@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "/home/xxx/LidarDronevoid/devel/include/traj_utils/Bspline.h"
-  "/home/xxx/LidarDronevoid/devel/include/traj_utils/DataDisp.h"
-  "/home/xxx/LidarDronevoid/devel/include/traj_utils/MultiBsplines.h"
+  "/home/jane/lidardrone/devel/include/traj_utils/Bspline.h"
+  "/home/jane/lidardrone/devel/include/traj_utils/DataDisp.h"
+  "/home/jane/lidardrone/devel/include/traj_utils/MultiBsplines.h"
   "CMakeFiles/traj_utils_generate_messages_cpp"
 )
 

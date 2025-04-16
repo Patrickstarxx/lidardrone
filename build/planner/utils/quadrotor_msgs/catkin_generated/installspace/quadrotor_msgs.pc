@@ -1,4 +1,4 @@
-prefix=/home/xxx/LidarDronevoid/install
+prefix=/home/jane/lidardrone/install
 
 Name: quadrotor_msgs
 Description: Description of quadrotor_msgs

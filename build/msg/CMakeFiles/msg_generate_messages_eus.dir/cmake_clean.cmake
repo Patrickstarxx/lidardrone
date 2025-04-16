@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "/home/xxx/LidarDronevoid/devel/share/roseus/ros/msg/manifest.l"
-  "/home/xxx/LidarDronevoid/devel/share/roseus/ros/msg/msg/NAV_WYPT_MODE.l"
-  "/home/xxx/LidarDronevoid/devel/share/roseus/ros/msg/msg/NAV_WYPT_TYPE_SWITCH.l"
+  "/home/jane/lidardrone/devel/share/roseus/ros/msg/manifest.l"
+  "/home/jane/lidardrone/devel/share/roseus/ros/msg/msg/NAV_WYPT_MODE.l"
+  "/home/jane/lidardrone/devel/share/roseus/ros/msg/msg/NAV_WYPT_TYPE_SWITCH.l"
   "CMakeFiles/msg_generate_messages_eus"
 )
 

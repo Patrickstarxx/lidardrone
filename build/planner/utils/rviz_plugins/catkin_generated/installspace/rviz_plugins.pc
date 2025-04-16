@@ -1,4 +1,4 @@
-prefix=/home/xxx/LidarDronevoid/install
+prefix=/home/jane/lidardrone/install
 
 Name: rviz_plugins
 Description: Description of rviz_plugins

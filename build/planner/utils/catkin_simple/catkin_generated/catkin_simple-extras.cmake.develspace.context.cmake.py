@@ -2,7 +2,7 @@
 DEVELSPACE = 'TRUE' == 'TRUE'
 INSTALLSPACE = 'FALSE' == 'TRUE'
 
-CATKIN_DEVEL_PREFIX = '/home/xxx/LidarDronevoid/devel'
+CATKIN_DEVEL_PREFIX = '/home/jane/lidardrone/devel'
 
 CATKIN_GLOBAL_BIN_DESTINATION = 'bin'
 CATKIN_GLOBAL_ETC_DESTINATION = 'etc'
@@ -20,14 +20,14 @@ CATKIN_PACKAGE_LIBEXEC_DESTINATION = 'lib/catkin_simple'
 CATKIN_PACKAGE_PYTHON_DESTINATION = 'lib/python3/dist-packages/catkin_simple'
 CATKIN_PACKAGE_SHARE_DESTINATION = 'share/catkin_simple'
 
-CMAKE_BINARY_DIR = '/home/xxx/LidarDronevoid/build'
-CMAKE_CURRENT_BINARY_DIR = '/home/xxx/LidarDronevoid/build/planner/utils/catkin_simple'
-CMAKE_CURRENT_SOURCE_DIR = '/home/xxx/LidarDronevoid/src/planner/utils/catkin_simple'
-CMAKE_INSTALL_PREFIX = '/home/xxx/LidarDronevoid/install'
-CMAKE_SOURCE_DIR = '/home/xxx/LidarDronevoid/src'
+CMAKE_BINARY_DIR = '/home/jane/lidardrone/build'
+CMAKE_CURRENT_BINARY_DIR = '/home/jane/lidardrone/build/planner/utils/catkin_simple'
+CMAKE_CURRENT_SOURCE_DIR = '/home/jane/lidardrone/src/planner/utils/catkin_simple'
+CMAKE_INSTALL_PREFIX = '/home/jane/lidardrone/install'
+CMAKE_SOURCE_DIR = '/home/jane/lidardrone/src'
 
-PKG_CMAKE_DIR = '/home/xxx/LidarDronevoid/devel/share/catkin_simple/cmake'
+PKG_CMAKE_DIR = '/home/jane/lidardrone/devel/share/catkin_simple/cmake'
 
 PROJECT_NAME = 'catkin_simple'
-PROJECT_BINARY_DIR = '/home/xxx/LidarDronevoid/build/planner/utils/catkin_simple'
-PROJECT_SOURCE_DIR = '/home/xxx/LidarDronevoid/src/planner/utils/catkin_simple'
+PROJECT_BINARY_DIR = '/home/jane/lidardrone/build/planner/utils/catkin_simple'
+PROJECT_SOURCE_DIR = '/home/jane/lidardrone/src/planner/utils/catkin_simple'

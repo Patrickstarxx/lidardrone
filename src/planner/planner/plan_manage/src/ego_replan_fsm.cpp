@@ -60,7 +60,7 @@ namespace ego_planner
     data_disp_pub_ = nh.advertise<traj_utils::DataDisp>("planning/data_display", 100);
     if(target_type_ == TARGET_TYPE::OFFB_TARGET)
     {
-      waypoint_sub_ = nh.subscribe("/offb_target_pos/target_pos", 1, &EGOReplanFSM::waypointCallback, this);
+      waypoint_sub_ = nh.subscribe("/offb_target_pos/target_pos", 1, &EGOReplanFSM::offbCallback, this);
     }
     else if (target_type_ == TARGET_TYPE::MANUAL_TARGET)
     {
@@ -224,7 +224,19 @@ namespace ego_planner
 
     planNextWaypoint(end_wp);
   }
+  void EGOReplanFSM::offbCallback(const geometry_msgs::PoseStampedPtr &msg)
+  {
+    if (msg->pose.position.z < -0.1)
+      return;
 
+    cout << "Triggered!" << endl;
+    // trigger_ = true;
+    init_pt_ = odom_pos_;
+
+    Eigen::Vector3d end_wp(msg->pose.position.x, msg->pose.position.y, msg->pose.position.z);
+
+    planNextWaypoint(end_wp);
+  }
   void EGOReplanFSM::odometryCallback(const nav_msgs::OdometryConstPtr &msg)
   {
     odom_pos_(0) = msg->pose.pose.position.x;
@@ -575,7 +587,12 @@ namespace ego_planner
             wp_id_ = 0;
             planNextWaypoint(wps_[wp_id_]);
           }
-
+          ROS_WARN("FSM 593");
+          ROS_WARN("FSM 593");
+          ROS_INFO("local_target_pt_=%f,%f",local_target_pt_.x(),local_target_pt_.y());
+          ROS_INFO("end_pt_=%f,%f",end_pt_.x(),end_pt_.y());
+          ROS_WARN("FSM 593");
+          ROS_WARN("FSM 593");
           changeFSMExecState(WAIT_TARGET, "FSM");
           goto force_return;
           // return;
@@ -583,11 +600,13 @@ namespace ego_planner
         else if ((end_pt_ - pos).norm() > no_replan_thresh_ && t_cur > replan_thresh_)
         {
           changeFSMExecState(REPLAN_TRAJ, "FSM");
+          ROS_WARN("FSM 591");
         }
       }
       else if (t_cur > replan_thresh_)
       {
         changeFSMExecState(REPLAN_TRAJ, "FSM");
+        ROS_WARN("FSM 597");
       }
 
       break;
@@ -938,6 +957,10 @@ namespace ego_planner
     if (t > planner_manager_->global_data_.global_duration_) // Last global point
     {
       local_target_pt_ = end_pt_;
+      ROS_WARN("FSM 945");
+      ROS_INFO("local_target_pt_ = end_pt_");
+      ROS_WARN("FSM 945");
+
       planner_manager_->global_data_.last_progress_time_ = planner_manager_->global_data_.global_duration_;
     }
 

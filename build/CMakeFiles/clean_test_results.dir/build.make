@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/xxx/LidarDronevoid/src
+CMAKE_SOURCE_DIR = /home/jane/lidardrone/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/xxx/LidarDronevoid/build
+CMAKE_BINARY_DIR = /home/jane/lidardrone/build
 
 # Utility rule file for clean_test_results.
 
@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/xxx/LidarDronevoid/build
 include CMakeFiles/clean_test_results.dir/progress.make
 
 CMakeFiles/clean_test_results:
-	/usr/bin/python3 /opt/ros/noetic/share/catkin/cmake/test/remove_test_results.py /home/xxx/LidarDronevoid/build/test_results
+	/usr/bin/python3 /opt/ros/noetic/share/catkin/cmake/test/remove_test_results.py /home/jane/lidardrone/build/test_results
 
 clean_test_results: CMakeFiles/clean_test_results
 clean_test_results: CMakeFiles/clean_test_results.dir/build.make
@@ -71,6 +71,6 @@ CMakeFiles/clean_test_results.dir/clean:
 .PHONY : CMakeFiles/clean_test_results.dir/clean
 
 CMakeFiles/clean_test_results.dir/depend:
-	cd /home/xxx/LidarDronevoid/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/xxx/LidarDronevoid/src /home/xxx/LidarDronevoid/src /home/xxx/LidarDronevoid/build /home/xxx/LidarDronevoid/build /home/xxx/LidarDronevoid/build/CMakeFiles/clean_test_results.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/jane/lidardrone/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jane/lidardrone/src /home/jane/lidardrone/src /home/jane/lidardrone/build /home/jane/lidardrone/build /home/jane/lidardrone/build/CMakeFiles/clean_test_results.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/clean_test_results.dir/depend
 

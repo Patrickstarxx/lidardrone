@@ -1,4 +1,4 @@
-prefix=/home/xxx/LidarDronevoid/install
+prefix=/home/jane/lidardrone/install
 
 Name: path_searching
 Description: Description of path_searching

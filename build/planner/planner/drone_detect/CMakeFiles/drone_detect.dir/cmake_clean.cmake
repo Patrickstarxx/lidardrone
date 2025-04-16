@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/xxx/LidarDronevoid/devel/lib/drone_detect/drone_detect"
-  "/home/xxx/LidarDronevoid/devel/lib/drone_detect/drone_detect.pdb"
+  "/home/jane/lidardrone/devel/lib/drone_detect/drone_detect"
+  "/home/jane/lidardrone/devel/lib/drone_detect/drone_detect.pdb"
   "CMakeFiles/drone_detect.dir/src/drone_detect_node.cpp.o"
   "CMakeFiles/drone_detect.dir/src/drone_detector.cpp.o"
 )

@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
-  "/home/xxx/LidarDronevoid/devel/share/roseus/ros/traj_utils/manifest.l"
-  "/home/xxx/LidarDronevoid/devel/share/roseus/ros/traj_utils/msg/Bspline.l"
-  "/home/xxx/LidarDronevoid/devel/share/roseus/ros/traj_utils/msg/DataDisp.l"
-  "/home/xxx/LidarDronevoid/devel/share/roseus/ros/traj_utils/msg/MultiBsplines.l"
+  "/home/jane/lidardrone/devel/share/roseus/ros/traj_utils/manifest.l"
+  "/home/jane/lidardrone/devel/share/roseus/ros/traj_utils/msg/Bspline.l"
+  "/home/jane/lidardrone/devel/share/roseus/ros/traj_utils/msg/DataDisp.l"
+  "/home/jane/lidardrone/devel/share/roseus/ros/traj_utils/msg/MultiBsplines.l"
   "CMakeFiles/traj_utils_generate_messages_eus"
 )
 

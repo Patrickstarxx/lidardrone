@@ -67,14 +67,14 @@ set(bspline_opt_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("TRUE" STREQUAL "TRUE")
-  set(bspline_opt_SOURCE_PREFIX /home/xxx/LidarDronevoid/src/planner/planner/bspline_opt)
-  set(bspline_opt_DEVEL_PREFIX /home/xxx/LidarDronevoid/devel)
+  set(bspline_opt_SOURCE_PREFIX /home/jane/lidardrone/src/planner/planner/bspline_opt)
+  set(bspline_opt_DEVEL_PREFIX /home/jane/lidardrone/devel)
   set(bspline_opt_INSTALL_PREFIX "")
   set(bspline_opt_PREFIX ${bspline_opt_DEVEL_PREFIX})
 else()
   set(bspline_opt_SOURCE_PREFIX "")
   set(bspline_opt_DEVEL_PREFIX "")
-  set(bspline_opt_INSTALL_PREFIX /home/xxx/LidarDronevoid/install)
+  set(bspline_opt_INSTALL_PREFIX /home/jane/lidardrone/install)
   set(bspline_opt_PREFIX ${bspline_opt_INSTALL_PREFIX})
 endif()
 
@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(bspline_opt_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT "/home/xxx/LidarDronevoid/src/planner/planner/bspline_opt/include " STREQUAL " ")
+if(NOT "/home/jane/lidardrone/src/planner/planner/bspline_opt/include " STREQUAL " ")
   set(bspline_opt_INCLUDE_DIRS "")
-  set(_include_dirs "/home/xxx/LidarDronevoid/src/planner/planner/bspline_opt/include")
+  set(_include_dirs "/home/jane/lidardrone/src/planner/planner/bspline_opt/include")
   if(NOT " " STREQUAL " ")
     set(_report "Check the issue tracker '' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT " " STREQUAL " ")
@@ -110,7 +110,7 @@ if(NOT "/home/xxx/LidarDronevoid/src/planner/planner/bspline_opt/include " STREQ
         message(FATAL_ERROR "Project 'bspline_opt' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  ${_report}")
       endif()
     else()
-      message(FATAL_ERROR "Project 'bspline_opt' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/xxx/LidarDronevoid/src/planner/planner/bspline_opt/${idir}'.  ${_report}")
+      message(FATAL_ERROR "Project 'bspline_opt' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/jane/lidardrone/src/planner/planner/bspline_opt/${idir}'.  ${_report}")
     endif()
     _list_append_unique(bspline_opt_INCLUDE_DIRS ${include})
   endforeach()
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/xxx/LidarDronevoid/devel/lib;/home/xxx/LidarDronevoid/devel/lib;/opt/ros/noetic/lib)
+    foreach(path /home/jane/lidardrone/devel/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

@@ -1,4 +1,4 @@
-prefix=/home/xxx/LidarDronevoid/install
+prefix=/home/jane/lidardrone/install
 
 Name: plan_env
 Description: Description of plan_env

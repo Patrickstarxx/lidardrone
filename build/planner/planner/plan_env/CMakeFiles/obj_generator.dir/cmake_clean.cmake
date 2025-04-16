@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/xxx/LidarDronevoid/devel/lib/plan_env/obj_generator"
-  "/home/xxx/LidarDronevoid/devel/lib/plan_env/obj_generator.pdb"
+  "/home/jane/lidardrone/devel/lib/plan_env/obj_generator"
+  "/home/jane/lidardrone/devel/lib/plan_env/obj_generator.pdb"
   "CMakeFiles/obj_generator.dir/src/obj_generator.cpp.o"
 )
 

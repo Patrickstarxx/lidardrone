@@ -1,4 +1,4 @@
-prefix=/home/xxx/LidarDronevoid/install
+prefix=/home/jane/lidardrone/install
 
 Name: pose_utils
 Description: Description of pose_utils

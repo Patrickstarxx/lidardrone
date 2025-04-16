@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/xxx/LidarDronevoid/devel/lib/ego_planner/traj_server"
-  "/home/xxx/LidarDronevoid/devel/lib/ego_planner/traj_server.pdb"
+  "/home/jane/lidardrone/devel/lib/ego_planner/traj_server"
+  "/home/jane/lidardrone/devel/lib/ego_planner/traj_server.pdb"
   "CMakeFiles/traj_server.dir/src/traj_server.cpp.o"
 )
 

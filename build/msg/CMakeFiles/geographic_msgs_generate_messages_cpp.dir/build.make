@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/xxx/LidarDronevoid/src
+CMAKE_SOURCE_DIR = /home/jane/lidardrone/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/xxx/LidarDronevoid/build
+CMAKE_BINARY_DIR = /home/jane/lidardrone/build
 
 # Utility rule file for geographic_msgs_generate_messages_cpp.
 
@@ -63,10 +63,10 @@ msg/CMakeFiles/geographic_msgs_generate_messages_cpp.dir/build: geographic_msgs_
 .PHONY : msg/CMakeFiles/geographic_msgs_generate_messages_cpp.dir/build
 
 msg/CMakeFiles/geographic_msgs_generate_messages_cpp.dir/clean:
-	cd /home/xxx/LidarDronevoid/build/msg && $(CMAKE_COMMAND) -P CMakeFiles/geographic_msgs_generate_messages_cpp.dir/cmake_clean.cmake
+	cd /home/jane/lidardrone/build/msg && $(CMAKE_COMMAND) -P CMakeFiles/geographic_msgs_generate_messages_cpp.dir/cmake_clean.cmake
 .PHONY : msg/CMakeFiles/geographic_msgs_generate_messages_cpp.dir/clean
 
 msg/CMakeFiles/geographic_msgs_generate_messages_cpp.dir/depend:
-	cd /home/xxx/LidarDronevoid/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/xxx/LidarDronevoid/src /home/xxx/LidarDronevoid/src/msg /home/xxx/LidarDronevoid/build /home/xxx/LidarDronevoid/build/msg /home/xxx/LidarDronevoid/build/msg/CMakeFiles/geographic_msgs_generate_messages_cpp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/jane/lidardrone/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jane/lidardrone/src /home/jane/lidardrone/src/msg /home/jane/lidardrone/build /home/jane/lidardrone/build/msg /home/jane/lidardrone/build/msg/CMakeFiles/geographic_msgs_generate_messages_cpp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : msg/CMakeFiles/geographic_msgs_generate_messages_cpp.dir/depend
 

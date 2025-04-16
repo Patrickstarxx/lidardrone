@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/xxx/LidarDronevoid/devel/lib/libbspline_opt.pdb"
-  "/home/xxx/LidarDronevoid/devel/lib/libbspline_opt.so"
+  "/home/jane/lidardrone/devel/lib/libbspline_opt.pdb"
+  "/home/jane/lidardrone/devel/lib/libbspline_opt.so"
   "CMakeFiles/bspline_opt.dir/src/bspline_optimizer.cpp.o"
   "CMakeFiles/bspline_opt.dir/src/gradient_descent_optimizer.cpp.o"
   "CMakeFiles/bspline_opt.dir/src/uniform_bspline.cpp.o"

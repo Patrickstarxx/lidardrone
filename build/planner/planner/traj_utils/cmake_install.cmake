@@ -1,8 +1,8 @@
-# Install script for directory: /home/xxx/LidarDronevoid/src/planner/planner/traj_utils
+# Install script for directory: /home/jane/lidardrone/src/planner/planner/traj_utils
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/xxx/LidarDronevoid/install")
+  set(CMAKE_INSTALL_PREFIX "/home/jane/lidardrone/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -39,56 +39,56 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/traj_utils/msg" TYPE FILE FILES
-    "/home/xxx/LidarDronevoid/src/planner/planner/traj_utils/msg/Bspline.msg"
-    "/home/xxx/LidarDronevoid/src/planner/planner/traj_utils/msg/DataDisp.msg"
-    "/home/xxx/LidarDronevoid/src/planner/planner/traj_utils/msg/MultiBsplines.msg"
+    "/home/jane/lidardrone/src/planner/planner/traj_utils/msg/Bspline.msg"
+    "/home/jane/lidardrone/src/planner/planner/traj_utils/msg/DataDisp.msg"
+    "/home/jane/lidardrone/src/planner/planner/traj_utils/msg/MultiBsplines.msg"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/traj_utils/cmake" TYPE FILE FILES "/home/xxx/LidarDronevoid/build/planner/planner/traj_utils/catkin_generated/installspace/traj_utils-msg-paths.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/traj_utils/cmake" TYPE FILE FILES "/home/jane/lidardrone/build/planner/planner/traj_utils/catkin_generated/installspace/traj_utils-msg-paths.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/xxx/LidarDronevoid/devel/include/traj_utils")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/jane/lidardrone/devel/include/traj_utils")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/xxx/LidarDronevoid/devel/share/roseus/ros/traj_utils")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/jane/lidardrone/devel/share/roseus/ros/traj_utils")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/xxx/LidarDronevoid/devel/share/common-lisp/ros/traj_utils")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/jane/lidardrone/devel/share/common-lisp/ros/traj_utils")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gennodejs/ros" TYPE DIRECTORY FILES "/home/xxx/LidarDronevoid/devel/share/gennodejs/ros/traj_utils")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gennodejs/ros" TYPE DIRECTORY FILES "/home/jane/lidardrone/devel/share/gennodejs/ros/traj_utils")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  execute_process(COMMAND "/usr/bin/python3" -m compileall "/home/xxx/LidarDronevoid/devel/lib/python3/dist-packages/traj_utils")
+  execute_process(COMMAND "/usr/bin/python3" -m compileall "/home/jane/lidardrone/devel/lib/python3/dist-packages/traj_utils")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3/dist-packages" TYPE DIRECTORY FILES "/home/xxx/LidarDronevoid/devel/lib/python3/dist-packages/traj_utils")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3/dist-packages" TYPE DIRECTORY FILES "/home/jane/lidardrone/devel/lib/python3/dist-packages/traj_utils")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/xxx/LidarDronevoid/build/planner/planner/traj_utils/catkin_generated/installspace/traj_utils.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/jane/lidardrone/build/planner/planner/traj_utils/catkin_generated/installspace/traj_utils.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/traj_utils/cmake" TYPE FILE FILES "/home/xxx/LidarDronevoid/build/planner/planner/traj_utils/catkin_generated/installspace/traj_utils-msg-extras.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/traj_utils/cmake" TYPE FILE FILES "/home/jane/lidardrone/build/planner/planner/traj_utils/catkin_generated/installspace/traj_utils-msg-extras.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/traj_utils/cmake" TYPE FILE FILES
-    "/home/xxx/LidarDronevoid/build/planner/planner/traj_utils/catkin_generated/installspace/traj_utilsConfig.cmake"
-    "/home/xxx/LidarDronevoid/build/planner/planner/traj_utils/catkin_generated/installspace/traj_utilsConfig-version.cmake"
+    "/home/jane/lidardrone/build/planner/planner/traj_utils/catkin_generated/installspace/traj_utilsConfig.cmake"
+    "/home/jane/lidardrone/build/planner/planner/traj_utils/catkin_generated/installspace/traj_utilsConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/traj_utils" TYPE FILE FILES "/home/xxx/LidarDronevoid/src/planner/planner/traj_utils/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/traj_utils" TYPE FILE FILES "/home/jane/lidardrone/src/planner/planner/traj_utils/package.xml")
 endif()
 

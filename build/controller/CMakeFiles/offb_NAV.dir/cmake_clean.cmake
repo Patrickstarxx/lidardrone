@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/xxx/LidarDronevoid/devel/lib/controller/offb_NAV"
-  "/home/xxx/LidarDronevoid/devel/lib/controller/offb_NAV.pdb"
+  "/home/jane/lidardrone/devel/lib/controller/offb_NAV"
+  "/home/jane/lidardrone/devel/lib/controller/offb_NAV.pdb"
   "CMakeFiles/offb_NAV.dir/src/offb_NAV.cpp.o"
 )
 

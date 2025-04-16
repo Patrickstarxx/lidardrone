@@ -1,5 +1,3 @@
-
-
 <launch>
   <!-- 完全匹配 geometry_msgs/PoseStamped 结构 -->
   <rosparam param="/waypoints">
@@ -24,5 +22,4 @@
 
   <!-- 启动导航点发布节点 -->
   <node name="offb_NAV" pkg="controller" type="offb_NAV" output="screen"/>
-
 </launch>

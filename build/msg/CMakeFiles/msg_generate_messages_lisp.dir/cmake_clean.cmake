@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/xxx/LidarDronevoid/devel/share/common-lisp/ros/msg/msg/NAV_WYPT_MODE.lisp"
-  "/home/xxx/LidarDronevoid/devel/share/common-lisp/ros/msg/msg/NAV_WYPT_TYPE_SWITCH.lisp"
+  "/home/jane/lidardrone/devel/share/common-lisp/ros/msg/msg/NAV_WYPT_MODE.lisp"
+  "/home/jane/lidardrone/devel/share/common-lisp/ros/msg/msg/NAV_WYPT_TYPE_SWITCH.lisp"
   "CMakeFiles/msg_generate_messages_lisp"
 )
 

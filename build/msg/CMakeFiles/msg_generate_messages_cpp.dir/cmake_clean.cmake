@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/xxx/LidarDronevoid/devel/include/msg/NAV_WYPT_MODE.h"
-  "/home/xxx/LidarDronevoid/devel/include/msg/NAV_WYPT_TYPE_SWITCH.h"
+  "/home/jane/lidardrone/devel/include/msg/NAV_WYPT_MODE.h"
+  "/home/jane/lidardrone/devel/include/msg/NAV_WYPT_TYPE_SWITCH.h"
   "CMakeFiles/msg_generate_messages_cpp"
 )
 

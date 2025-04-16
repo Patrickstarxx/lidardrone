@@ -1,8 +1,8 @@
-# Install script for directory: /home/xxx/LidarDronevoid/src/msg
+# Install script for directory: /home/jane/lidardrone/src/msg
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/xxx/LidarDronevoid/install")
+  set(CMAKE_INSTALL_PREFIX "/home/jane/lidardrone/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -39,55 +39,55 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/msg/msg" TYPE FILE FILES
-    "/home/xxx/LidarDronevoid/src/msg/msg/NAV_WYPT_MODE.msg"
-    "/home/xxx/LidarDronevoid/src/msg/msg/NAV_WYPT_TYPE_SWITCH.msg"
+    "/home/jane/lidardrone/src/msg/msg/NAV_WYPT_MODE.msg"
+    "/home/jane/lidardrone/src/msg/msg/NAV_WYPT_TYPE_SWITCH.msg"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/msg/cmake" TYPE FILE FILES "/home/xxx/LidarDronevoid/build/msg/catkin_generated/installspace/msg-msg-paths.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/msg/cmake" TYPE FILE FILES "/home/jane/lidardrone/build/msg/catkin_generated/installspace/msg-msg-paths.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/xxx/LidarDronevoid/devel/include/msg")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/jane/lidardrone/devel/include/msg")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/xxx/LidarDronevoid/devel/share/roseus/ros/msg")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/jane/lidardrone/devel/share/roseus/ros/msg")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/xxx/LidarDronevoid/devel/share/common-lisp/ros/msg")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/jane/lidardrone/devel/share/common-lisp/ros/msg")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gennodejs/ros" TYPE DIRECTORY FILES "/home/xxx/LidarDronevoid/devel/share/gennodejs/ros/msg")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gennodejs/ros" TYPE DIRECTORY FILES "/home/jane/lidardrone/devel/share/gennodejs/ros/msg")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  execute_process(COMMAND "/usr/bin/python3" -m compileall "/home/xxx/LidarDronevoid/devel/lib/python3/dist-packages/msg")
+  execute_process(COMMAND "/usr/bin/python3" -m compileall "/home/jane/lidardrone/devel/lib/python3/dist-packages/msg")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3/dist-packages" TYPE DIRECTORY FILES "/home/xxx/LidarDronevoid/devel/lib/python3/dist-packages/msg")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3/dist-packages" TYPE DIRECTORY FILES "/home/jane/lidardrone/devel/lib/python3/dist-packages/msg")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/xxx/LidarDronevoid/build/msg/catkin_generated/installspace/msg.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/jane/lidardrone/build/msg/catkin_generated/installspace/msg.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/msg/cmake" TYPE FILE FILES "/home/xxx/LidarDronevoid/build/msg/catkin_generated/installspace/msg-msg-extras.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/msg/cmake" TYPE FILE FILES "/home/jane/lidardrone/build/msg/catkin_generated/installspace/msg-msg-extras.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/msg/cmake" TYPE FILE FILES
-    "/home/xxx/LidarDronevoid/build/msg/catkin_generated/installspace/msgConfig.cmake"
-    "/home/xxx/LidarDronevoid/build/msg/catkin_generated/installspace/msgConfig-version.cmake"
+    "/home/jane/lidardrone/build/msg/catkin_generated/installspace/msgConfig.cmake"
+    "/home/jane/lidardrone/build/msg/catkin_generated/installspace/msgConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/msg" TYPE FILE FILES "/home/xxx/LidarDronevoid/src/msg/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/msg" TYPE FILE FILES "/home/jane/lidardrone/src/msg/package.xml")
 endif()
 

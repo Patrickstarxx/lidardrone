@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/xxx/LidarDronevoid/devel/lib/libplan_env.pdb"
-  "/home/xxx/LidarDronevoid/devel/lib/libplan_env.so"
+  "/home/jane/lidardrone/devel/lib/libplan_env.pdb"
+  "/home/jane/lidardrone/devel/lib/libplan_env.so"
   "CMakeFiles/plan_env.dir/src/grid_map.cpp.o"
   "CMakeFiles/plan_env.dir/src/obj_predictor.cpp.o"
   "CMakeFiles/plan_env.dir/src/raycast.cpp.o"

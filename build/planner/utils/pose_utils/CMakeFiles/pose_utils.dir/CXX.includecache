@@ -6,13 +6,13 @@
 
 #IncludeRegexTransform: 
 
-/home/xxx/LidarDronevoid/src/planner/utils/pose_utils/include/pose_utils.h
+/home/jane/lidardrone/src/planner/utils/pose_utils/include/pose_utils.h
 iostream
 -
 armadillo
-/home/xxx/LidarDronevoid/src/planner/utils/pose_utils/include/armadillo
+/home/jane/lidardrone/src/planner/utils/pose_utils/include/armadillo
 
-/home/xxx/LidarDronevoid/src/planner/utils/pose_utils/src/pose_utils.cpp
+/home/jane/lidardrone/src/planner/utils/pose_utils/src/pose_utils.cpp
 pose_utils.h
-/home/xxx/LidarDronevoid/src/planner/utils/pose_utils/src/pose_utils.h
+/home/jane/lidardrone/src/planner/utils/pose_utils/src/pose_utils.h
 

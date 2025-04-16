@@ -1,9 +1,9 @@
 file(REMOVE_RECURSE
-  "/home/xxx/LidarDronevoid/devel/share/roseus/ros/decomp_ros_msgs/manifest.l"
-  "/home/xxx/LidarDronevoid/devel/share/roseus/ros/decomp_ros_msgs/msg/Ellipsoid.l"
-  "/home/xxx/LidarDronevoid/devel/share/roseus/ros/decomp_ros_msgs/msg/EllipsoidArray.l"
-  "/home/xxx/LidarDronevoid/devel/share/roseus/ros/decomp_ros_msgs/msg/Polyhedron.l"
-  "/home/xxx/LidarDronevoid/devel/share/roseus/ros/decomp_ros_msgs/msg/PolyhedronArray.l"
+  "/home/jane/lidardrone/devel/share/roseus/ros/decomp_ros_msgs/manifest.l"
+  "/home/jane/lidardrone/devel/share/roseus/ros/decomp_ros_msgs/msg/Ellipsoid.l"
+  "/home/jane/lidardrone/devel/share/roseus/ros/decomp_ros_msgs/msg/EllipsoidArray.l"
+  "/home/jane/lidardrone/devel/share/roseus/ros/decomp_ros_msgs/msg/Polyhedron.l"
+  "/home/jane/lidardrone/devel/share/roseus/ros/decomp_ros_msgs/msg/PolyhedronArray.l"
   "CMakeFiles/decomp_ros_msgs_generate_messages_eus"
 )
 

@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/xxx/LidarDronevoid/src/planner/planner/drone_detect/include/drone_detector/drone_detector.h
+/home/jane/lidardrone/src/planner/planner/drone_detect/include/drone_detector/drone_detector.h
 iostream
 -
 vector
@@ -14,9 +14,9 @@ vector
 ros/ros.h
 -
 std_msgs/String.h
-/home/xxx/LidarDronevoid/src/planner/planner/drone_detect/include/drone_detector/std_msgs/String.h
+/home/jane/lidardrone/src/planner/planner/drone_detect/include/drone_detector/std_msgs/String.h
 std_msgs/Bool.h
-/home/xxx/LidarDronevoid/src/planner/planner/drone_detect/include/drone_detector/std_msgs/Bool.h
+/home/jane/lidardrone/src/planner/planner/drone_detect/include/drone_detector/std_msgs/Bool.h
 nav_msgs/Odometry.h
 -
 geometry_msgs/PoseStamped.h
@@ -44,15 +44,15 @@ opencv2/core/eigen.hpp
 cv_bridge/cv_bridge.h
 -
 
-/home/xxx/LidarDronevoid/src/planner/planner/drone_detect/src/drone_detect_node.cpp
+/home/jane/lidardrone/src/planner/planner/drone_detect/src/drone_detect_node.cpp
 ros/ros.h
 -
 drone_detector/drone_detector.h
-/home/xxx/LidarDronevoid/src/planner/planner/drone_detect/src/drone_detector/drone_detector.h
+/home/jane/lidardrone/src/planner/planner/drone_detect/src/drone_detector/drone_detector.h
 
-/home/xxx/LidarDronevoid/src/planner/planner/drone_detect/src/drone_detector.cpp
+/home/jane/lidardrone/src/planner/planner/drone_detect/src/drone_detector.cpp
 drone_detector/drone_detector.h
-/home/xxx/LidarDronevoid/src/planner/planner/drone_detect/src/drone_detector/drone_detector.h
+/home/jane/lidardrone/src/planner/planner/drone_detect/src/drone_detector/drone_detector.h
 string
 -
 

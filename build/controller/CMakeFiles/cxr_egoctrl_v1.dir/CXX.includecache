@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/xxx/LidarDronevoid/devel/include/msg/NAV_WYPT_MODE.h
+/home/jane/lidardrone/devel/include/msg/NAV_WYPT_MODE.h
 string
 -
 vector
@@ -22,7 +22,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/xxx/LidarDronevoid/devel/include/quadrotor_msgs/PositionCommand.h
+/home/jane/lidardrone/devel/include/quadrotor_msgs/PositionCommand.h
 string
 -
 vector
@@ -46,7 +46,7 @@ geometry_msgs/Vector3.h
 geometry_msgs/Vector3.h
 -
 
-/home/xxx/LidarDronevoid/src/controller/src/cxr_egoctrl_v1.cpp
+/home/jane/lidardrone/src/controller/src/cxr_egoctrl_v1.cpp
 ros/ros.h
 -
 visualization_msgs/Marker.h

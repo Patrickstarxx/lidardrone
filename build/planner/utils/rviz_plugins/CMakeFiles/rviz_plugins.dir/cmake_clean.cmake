@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/xxx/LidarDronevoid/devel/lib/librviz_plugins.pdb"
-  "/home/xxx/LidarDronevoid/devel/lib/librviz_plugins.so"
+  "/home/jane/lidardrone/devel/lib/librviz_plugins.pdb"
+  "/home/jane/lidardrone/devel/lib/librviz_plugins.so"
   "CMakeFiles/rviz_plugins.dir/src/goal_tool.cpp.o"
   "CMakeFiles/rviz_plugins.dir/src/moc_goal_tool.cpp.o"
   "CMakeFiles/rviz_plugins.dir/src/pose_tool.cpp.o"

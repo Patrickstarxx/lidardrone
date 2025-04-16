@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
-  "/home/xxx/LidarDronevoid/devel/lib/python3/dist-packages/traj_utils/msg/_Bspline.py"
-  "/home/xxx/LidarDronevoid/devel/lib/python3/dist-packages/traj_utils/msg/_DataDisp.py"
-  "/home/xxx/LidarDronevoid/devel/lib/python3/dist-packages/traj_utils/msg/_MultiBsplines.py"
-  "/home/xxx/LidarDronevoid/devel/lib/python3/dist-packages/traj_utils/msg/__init__.py"
+  "/home/jane/lidardrone/devel/lib/python3/dist-packages/traj_utils/msg/_Bspline.py"
+  "/home/jane/lidardrone/devel/lib/python3/dist-packages/traj_utils/msg/_DataDisp.py"
+  "/home/jane/lidardrone/devel/lib/python3/dist-packages/traj_utils/msg/_MultiBsplines.py"
+  "/home/jane/lidardrone/devel/lib/python3/dist-packages/traj_utils/msg/__init__.py"
   "CMakeFiles/traj_utils_generate_messages_py"
 )
 

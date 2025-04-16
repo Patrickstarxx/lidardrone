@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/xxx/LidarDronevoid/src
+CMAKE_SOURCE_DIR = /home/jane/lidardrone/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/xxx/LidarDronevoid/build
+CMAKE_BINARY_DIR = /home/jane/lidardrone/build
 
 # Utility rule file for traj_utils_genlisp.
 
@@ -63,10 +63,10 @@ planner/planner/traj_utils/CMakeFiles/traj_utils_genlisp.dir/build: traj_utils_g
 .PHONY : planner/planner/traj_utils/CMakeFiles/traj_utils_genlisp.dir/build
 
 planner/planner/traj_utils/CMakeFiles/traj_utils_genlisp.dir/clean:
-	cd /home/xxx/LidarDronevoid/build/planner/planner/traj_utils && $(CMAKE_COMMAND) -P CMakeFiles/traj_utils_genlisp.dir/cmake_clean.cmake
+	cd /home/jane/lidardrone/build/planner/planner/traj_utils && $(CMAKE_COMMAND) -P CMakeFiles/traj_utils_genlisp.dir/cmake_clean.cmake
 .PHONY : planner/planner/traj_utils/CMakeFiles/traj_utils_genlisp.dir/clean
 
 planner/planner/traj_utils/CMakeFiles/traj_utils_genlisp.dir/depend:
-	cd /home/xxx/LidarDronevoid/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/xxx/LidarDronevoid/src /home/xxx/LidarDronevoid/src/planner/planner/traj_utils /home/xxx/LidarDronevoid/build /home/xxx/LidarDronevoid/build/planner/planner/traj_utils /home/xxx/LidarDronevoid/build/planner/planner/traj_utils/CMakeFiles/traj_utils_genlisp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/jane/lidardrone/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jane/lidardrone/src /home/jane/lidardrone/src/planner/planner/traj_utils /home/jane/lidardrone/build /home/jane/lidardrone/build/planner/planner/traj_utils /home/jane/lidardrone/build/planner/planner/traj_utils/CMakeFiles/traj_utils_genlisp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : planner/planner/traj_utils/CMakeFiles/traj_utils_genlisp.dir/depend
 

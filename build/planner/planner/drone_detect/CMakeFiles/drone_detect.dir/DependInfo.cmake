@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/xxx/LidarDronevoid/src/planner/planner/drone_detect/src/drone_detect_node.cpp" "/home/xxx/LidarDronevoid/build/planner/planner/drone_detect/CMakeFiles/drone_detect.dir/src/drone_detect_node.cpp.o"
-  "/home/xxx/LidarDronevoid/src/planner/planner/drone_detect/src/drone_detector.cpp" "/home/xxx/LidarDronevoid/build/planner/planner/drone_detect/CMakeFiles/drone_detect.dir/src/drone_detector.cpp.o"
+  "/home/jane/lidardrone/src/planner/planner/drone_detect/src/drone_detect_node.cpp" "/home/jane/lidardrone/build/planner/planner/drone_detect/CMakeFiles/drone_detect.dir/src/drone_detect_node.cpp.o"
+  "/home/jane/lidardrone/src/planner/planner/drone_detect/src/drone_detector.cpp" "/home/jane/lidardrone/build/planner/planner/drone_detect/CMakeFiles/drone_detect.dir/src/drone_detector.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -18,7 +18,7 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/home/xxx/LidarDronevoid/src/planner/planner/drone_detect/include"
+  "/home/jane/lidardrone/src/planner/planner/drone_detect/include"
   "/opt/ros/noetic/include"
   "/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
   "/usr/include/eigen3"

@@ -1,4 +1,4 @@
-prefix=/home/xxx/LidarDronevoid/devel
+prefix=/home/jane/lidardrone/devel
 
 Name: offb_bag
 Description: Description of offb_bag

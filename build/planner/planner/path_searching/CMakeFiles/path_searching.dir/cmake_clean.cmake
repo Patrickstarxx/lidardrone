@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/xxx/LidarDronevoid/devel/lib/libpath_searching.pdb"
-  "/home/xxx/LidarDronevoid/devel/lib/libpath_searching.so"
+  "/home/jane/lidardrone/devel/lib/libpath_searching.pdb"
+  "/home/jane/lidardrone/devel/lib/libpath_searching.so"
   "CMakeFiles/path_searching.dir/src/dyn_a_star.cpp.o"
 )
 

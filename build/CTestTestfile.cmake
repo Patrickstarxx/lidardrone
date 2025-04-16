@@ -1,6 +1,6 @@
 # CMake generated Testfile for 
-# Source directory: /home/xxx/LidarDronevoid/src
-# Build directory: /home/xxx/LidarDronevoid/build
+# Source directory: /home/jane/lidardrone/src
+# Build directory: /home/jane/lidardrone/build
 # 
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.

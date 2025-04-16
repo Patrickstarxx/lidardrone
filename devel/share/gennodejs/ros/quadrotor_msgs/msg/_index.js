@@ -1,34 +1,34 @@
 
 "use strict";
 
-let LQRTrajectory = require('./LQRTrajectory.js');
-let PPROutputData = require('./PPROutputData.js');
-let StatusData = require('./StatusData.js');
 let Corrections = require('./Corrections.js');
-let Gains = require('./Gains.js');
-let Serial = require('./Serial.js');
 let PolynomialTrajectory = require('./PolynomialTrajectory.js');
-let SO3Command = require('./SO3Command.js');
-let AuxCommand = require('./AuxCommand.js');
-let GoalSet = require('./GoalSet.js');
-let OutputData = require('./OutputData.js');
 let PositionCommand = require('./PositionCommand.js');
+let LQRTrajectory = require('./LQRTrajectory.js');
+let Serial = require('./Serial.js');
+let OutputData = require('./OutputData.js');
+let AuxCommand = require('./AuxCommand.js');
+let Gains = require('./Gains.js');
+let SO3Command = require('./SO3Command.js');
+let StatusData = require('./StatusData.js');
 let Odometry = require('./Odometry.js');
+let GoalSet = require('./GoalSet.js');
 let TRPYCommand = require('./TRPYCommand.js');
+let PPROutputData = require('./PPROutputData.js');
 
 module.exports = {
-  LQRTrajectory: LQRTrajectory,
-  PPROutputData: PPROutputData,
-  StatusData: StatusData,
   Corrections: Corrections,
-  Gains: Gains,
-  Serial: Serial,
   PolynomialTrajectory: PolynomialTrajectory,
-  SO3Command: SO3Command,
-  AuxCommand: AuxCommand,
-  GoalSet: GoalSet,
-  OutputData: OutputData,
   PositionCommand: PositionCommand,
+  LQRTrajectory: LQRTrajectory,
+  Serial: Serial,
+  OutputData: OutputData,
+  AuxCommand: AuxCommand,
+  Gains: Gains,
+  SO3Command: SO3Command,
+  StatusData: StatusData,
   Odometry: Odometry,
+  GoalSet: GoalSet,
   TRPYCommand: TRPYCommand,
+  PPROutputData: PPROutputData,
 };

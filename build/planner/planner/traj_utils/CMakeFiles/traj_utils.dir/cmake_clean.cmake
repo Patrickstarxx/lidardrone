@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/xxx/LidarDronevoid/devel/lib/libtraj_utils.pdb"
-  "/home/xxx/LidarDronevoid/devel/lib/libtraj_utils.so"
+  "/home/jane/lidardrone/devel/lib/libtraj_utils.pdb"
+  "/home/jane/lidardrone/devel/lib/libtraj_utils.so"
   "CMakeFiles/traj_utils.dir/src/planning_visualization.cpp.o"
   "CMakeFiles/traj_utils.dir/src/polynomial_traj.cpp.o"
 )

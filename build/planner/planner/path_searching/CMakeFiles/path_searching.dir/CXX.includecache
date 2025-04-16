@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/xxx/LidarDronevoid/src/planner/planner/path_searching/include/path_searching/dyn_a_star.h
+/home/jane/lidardrone/src/planner/planner/path_searching/include/path_searching/dyn_a_star.h
 iostream
 -
 ros/ros.h
@@ -20,11 +20,11 @@ plan_env/grid_map.h
 queue
 -
 
-/home/xxx/LidarDronevoid/src/planner/planner/path_searching/src/dyn_a_star.cpp
+/home/jane/lidardrone/src/planner/planner/path_searching/src/dyn_a_star.cpp
 path_searching/dyn_a_star.h
-/home/xxx/LidarDronevoid/src/planner/planner/path_searching/src/path_searching/dyn_a_star.h
+/home/jane/lidardrone/src/planner/planner/path_searching/src/path_searching/dyn_a_star.h
 
-/home/xxx/LidarDronevoid/src/planner/planner/plan_env/include/plan_env/grid_map.h
+/home/jane/lidardrone/src/planner/planner/plan_env/include/plan_env/grid_map.h
 Eigen/Eigen
 -
 Eigen/StdVector
@@ -64,7 +64,7 @@ message_filters/time_synchronizer.h
 plan_env/raycast.h
 -
 
-/home/xxx/LidarDronevoid/src/planner/planner/plan_env/include/plan_env/raycast.h
+/home/jane/lidardrone/src/planner/planner/plan_env/include/plan_env/raycast.h
 Eigen/Eigen
 -
 vector

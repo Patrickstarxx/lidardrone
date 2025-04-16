@@ -105,6 +105,7 @@ namespace ego_planner
     void execFSMCallback(const ros::TimerEvent &e);
     void checkCollisionCallback(const ros::TimerEvent &e);
     void waypointCallback(const geometry_msgs::PoseStampedPtr &msg);
+    void offbCallback(const geometry_msgs::PoseStampedPtr &msg);
     void triggerCallback(const geometry_msgs::PoseStampedPtr &msg);
     void odometryCallback(const nav_msgs::OdometryConstPtr &msg);
     void swarmTrajsCallback(const traj_utils::MultiBsplinesPtr &msg);

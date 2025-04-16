@@ -1,0 +1,456 @@
+Script started on 2025-04-12 20:30:17+08:00 [TERM="xterm-256color" TTY="/dev/pts/3" COLUMNS="73" LINES="24"]
+]0;jane@jane: ~/lidardrone[01;32mjane@jane[00m:[01;34m~/lidardrone[00m$ rostopic echo /camera_displacement [K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kroslaunch ego_planner single_run_in_exp.launch
+[31mRLException: [single_run_in_exp.launch] is neither a launch file in package [ego_planner] nor is [ego_planner] a launch file name[0m
+[31mThe traceback for the exception was written to the log file[0m
+]0;jane@jane: ~/lidardrone[01;32mjane@jane[00m:[01;34m~/lidardrone[00m$ source devel/setup.bash
+]0;jane@jane: ~/lidardrone[01;32mjane@jane[00m:[01;34m~/lidardrone[00m$ source devel/setup.bashroslaunch ego_planner single_run_in_exp.launch
+... logging to /home/jane/.ros/log/993e5b52-1799-11f0-89ce-1bd8c2b2b62c/roslaunch-jane-3267.log
+Checking log directory for disk usage. This may take a while.
+Press Ctrl-C to interrupt
+Done checking log file disk usage. Usage is <1GB.
+]2;/home/jane/lidardrone/src/planner/planner/plan_manage/launch/single_run_in_exp.launch
+[1mstarted roslaunch server http://192.168.0.111:42119/[0m
+
+SUMMARY
+========
+
+PARAMETERS
+ * /drone_0_ego_planner_node/bspline/limit_acc: 4.0
+ * /drone_0_ego_planner_node/bspline/limit_ratio: 1.1
+ * /drone_0_ego_planner_node/bspline/limit_vel: 0.8
+ * /drone_0_ego_planner_node/fsm/emergency_time: 1.0
+ * /drone_0_ego_planner_node/fsm/fail_safe: True
+ * /drone_0_ego_planner_node/fsm/flight_type: 4
+ * /drone_0_ego_planner_node/fsm/planning_horizen_time: 3.0
+ * /drone_0_ego_planner_node/fsm/planning_horizon: 6.0
+ * /drone_0_ego_planner_node/fsm/realworld_experiment: True
+ * /drone_0_ego_planner_node/fsm/thresh_no_replan_meter: 1.0
+ * /drone_0_ego_planner_node/fsm/thresh_replan_time: 1.0
+ * /drone_0_ego_planner_node/fsm/waypoint0_x: 15.0
+ * /drone_0_ego_planner_node/fsm/waypoint0_y: 0.0
+ * /drone_0_ego_planner_node/fsm/waypoint0_z: 1.0
+ * /drone_0_ego_planner_node/fsm/waypoint1_x: 0.0
+ * /drone_0_ego_planner_node/fsm/waypoint1_y: 0.0
+ * /drone_0_ego_planner_node/fsm/waypoint1_z: 1.0
+ * /drone_0_ego_planner_node/fsm/waypoint2_x: 15.0
+ * /drone_0_ego_planner_node/fsm/waypoint2_y: 0.0
+ * /drone_0_ego_planner_node/fsm/waypoint2_z: 1.0
+ * /drone_0_ego_planner_node/fsm/waypoint3_x: 0.0
+ * /drone_0_ego_planner_node/fsm/waypoint3_y: 0.0
+ * /drone_0_ego_planner_node/fsm/waypoint3_z: 1.0
+ * /drone_0_ego_planner_node/fsm/waypoint4_x: 15.0
+ * /drone_0_ego_planner_node/fsm/waypoint4_y: 0.0
+ * /drone_0_ego_planner_node/fsm/waypoint4_z: 1.0
+ * /drone_0_ego_planner_node/fsm/waypoint_num: 1
+ * /drone_0_ego_planner_node/grid_map/cx: 323.3316345214844
+ * /drone_0_ego_planner_node/grid_map/cy: 234.95498657226562
+ * /drone_0_ego_planner_node/grid_map/depth_filter_margin: 2
+ * /drone_0_ego_planner_node/grid_map/depth_filter_maxdist: 5.0
+ * /drone_0_ego_planner_node/grid_map/depth_filter_mindist: 0.2
+ * /drone_0_ego_planner_node/grid_map/depth_filter_tolerance: 0.15
+ * /drone_0_ego_planner_node/grid_map/frame_id: world
+ * /drone_0_ego_planner_node/grid_map/fx: 384.39654541015625
+ * /drone_0_ego_planner_node/grid_map/fy: 384.39654541015625
+ * /drone_0_ego_planner_node/grid_map/ground_height: -0.01
+ * /drone_0_ego_planner_node/grid_map/k_depth_scaling_factor: 1000.0
+ * /drone_0_ego_planner_node/grid_map/local_map_margin: 10
+ * /drone_0_ego_planner_node/grid_map/local_update_range_x: 5.5
+ * /drone_0_ego_planner_node/grid_map/local_update_range_y: 5.5
+ * /drone_0_ego_planner_node/grid_map/local_update_range_z: 4.5
+ * /drone_0_ego_planner_node/grid_map/map_size_x: 50
+ * /drone_0_ego_planner_node/grid_map/map_size_y: 30
+ * /drone_0_ego_planner_node/grid_map/map_size_z: 2.0
+ * /drone_0_ego_planner_node/grid_map/max_ray_length: 5.0
+ * /drone_0_ego_planner_node/grid_map/min_ray_length: 0.3
+ * /drone_0_ego_planner_node/grid_map/obstacles_inflation: 0.299
+ * /drone_0_ego_planner_node/grid_map/p_hit: 0.65
+ * /drone_0_ego_planner_node/grid_map/p_max: 0.9
+ * /drone_0_ego_planner_node/grid_map/p_min: 0.12
+ * /drone_0_ego_planner_node/grid_map/p_miss: 0.35
+ * /drone_0_ego_planner_node/grid_map/p_occ: 0.8
+ * /drone_0_ego_planner_node/grid_map/pose_type: 2
+ * /drone_0_ego_planner_node/grid_map/resolution: 0.15
+ * /drone_0_ego_planner_node/grid_map/show_occ_time: False
+ * /drone_0_ego_planner_node/grid_map/skip_pixel: 2
+ * /drone_0_ego_planner_node/grid_map/use_depth_filter: True
+ * /drone_0_ego_planner_node/grid_map/visualization_truncate_height: 1.8
+ * /drone_0_ego_planner_node/manager/control_points_distance: 0.4
+ * /drone_0_ego_planner_node/manager/drone_id: 0
+ * /drone_0_ego_planner_node/manager/feasibility_tolerance: 0.05
+ * /drone_0_ego_planner_node/manager/max_acc: 4.0
+ * /drone_0_ego_planner_node/manager/max_jerk: 4.0
+ * /drone_0_ego_planner_node/manager/max_vel: 0.8
+ * /drone_0_ego_planner_node/manager/planning_horizon: 6.0
+ * /drone_0_ego_planner_node/manager/use_distinctive_trajs: False
+ * /drone_0_ego_planner_node/optimization/dist0: 0.5
+ * /drone_0_ego_planner_node/optimization/lambda_collision: 0.5
+ * /drone_0_ego_planner_node/optimization/lambda_feasibility: 0.1
+ * /drone_0_ego_planner_node/optimization/lambda_fitness: 1.0
+ * /drone_0_ego_planner_node/optimization/lambda_smooth: 1.0
+ * /drone_0_ego_planner_node/optimization/max_acc: 4.0
+ * /drone_0_ego_planner_node/optimization/max_vel: 0.8
+ * /drone_0_ego_planner_node/optimization/swarm_clearance: 0.5
+ * /drone_0_ego_planner_node/prediction/lambda: 1.0
+ * /drone_0_ego_planner_node/prediction/obj_num: 10
+ * /drone_0_ego_planner_node/prediction/predict_rate: 1.0
+ * /drone_0_traj_server/traj_server/time_forward: 1.0
+ * /rosdistro: noetic
+ * /rosversion: 1.17.0
+
+NODES
+  /
+    drone_0_ego_planner_node (ego_planner/ego_planner_node)
+    drone_0_traj_server (ego_planner/traj_server)
+
+[1mROS_MASTER_URI=http://192.168.0.111:11311[0m
+]2;/home/jane/lidardrone/src/planner/planner/plan_manage/launch/single_run_in_exp.launch http://192.168.0.111:11311
+[1mprocess[drone_0_ego_planner_node-1]: started with pid [3281][0m
+[1mprocess[drone_0_traj_server-2]: started with pid [3282][0m
+hit: 0.619039
+miss: -0.619039
+min log: -1.99243
+max: 2.19722
+thresh log: 1.38629
+[FSM]: from INIT to WAIT_TARGET
+[33m[ WARN] [1744461082.215191350]: [Traj server]: ready.[0m
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+Triggered!
+[TRIG]: from WAIT_TARGET to GEN_NEW_TRAJ
+[47;30m
+[drone 0 replan 0]==============================================[0m
+[33m[ WARN] [1744461195.322743517]: Solver error. Return = -1008, A rounding error occurred; alternatively, no line-search step satisfies the sufficient decrease and curvature conditions.. Skip this planning.[0m
+plan_success=0
+refine_success=0
+[47;30m
+[drone 0 replan 1]==============================================[0m
+[33m[ WARN] [1744461195.326503852]: Solver error. Return = -1008, A rounding error occurred; alternatively, no line-search step satisfies the sufficient decrease and curvature conditions.. Skip this planning.[0m
+plan_success=0
+refine_success=0
+[47;30m
+[drone 0 replan 2]==============================================[0m
+[33m[ WARN] [1744461195.327384020]: Solver error. Return = -1008, A rounding error occurred; alternatively, no line-search step satisfies the sufficient decrease and curvature conditions.. Skip this planning.[0m
+plan_success=0
+refine_success=0
+[47;30m
+[drone 0 replan 3]==============================================[0m
+[33m[ WARN] [1744461195.328204785]: Solver error. Return = -1008, A rounding error occurred; alternatively, no line-search step satisfies the sufficient decrease and curvature conditions.. Skip this planning.[0m
+plan_success=0
+refine_success=0
+[47;30m
+[drone 0 replan 4]==============================================[0m
+[33m[ WARN] [1744461195.329074571]: Solver error. Return = -1008, A rounding error occurred; alternatively, no line-search step satisfies the sufficient decrease and curvature conditions.. Skip this planning.[0m
+plan_success=0
+refine_success=0
+[47;30m
+[drone 0 replan 5]==============================================[0m
+[33m[ WARN] [1744461195.329885135]: Solver error. Return = -1008, A rounding error occurred; alternatively, no line-search step satisfies the sufficient decrease and curvature conditions.. Skip this planning.[0m
+plan_success=0
+refine_success=0
+[47;30m
+[drone 0 replan 6]==============================================[0m
+[33m[ WARN] [1744461195.330680540]: Solver error. Return = -1008, A rounding error occurred; alternatively, no line-search step satisfies the sufficient decrease and curvature conditions.. Skip this planning.[0m
+plan_success=0
+refine_success=0
+[47;30m
+[drone 0 replan 7]==============================================[0m
+[33m[ WARN] [1744461195.331560877]: Solver error. Return = -1008, A rounding error occurred; alternatively, no line-search step satisfies the sufficient decrease and curvature conditions.. Skip this planning.[0m
+plan_success=0
+refine_success=0
+[47;30m
+[drone 0 replan 8]==============================================[0m
+[33m[ WARN] [1744461195.332242336]: Solver error. Return = -1008, A rounding error occurred; alternatively, no line-search step satisfies the sufficient decrease and curvature conditions.. Skip this planning.[0m
+plan_success=0
+refine_success=0
+[47;30m
+[drone 0 replan 9]==============================================[0m
+[33m[ WARN] [1744461195.332839267]: Solver error. Return = -1008, A rounding error occurred; alternatively, no line-search step satisfies the sufficient decrease and curvature conditions.. Skip this planning.[0m
+plan_success=0
+refine_success=0
+[FSM]: from GEN_NEW_TRAJ to GEN_NEW_TRAJ
+[47;30m
+[drone 0 replan 10]==============================================[0m
+[32miter(+1)=100,time(ms)=0.353,total_t(ms)=0.353,cost=0.006
+[0mplan_success=1
+total time:[42m0.000627435[0m,optimize:0.000624237,refine:3.198e-06,avg_time=0.000627435
+refine_success=1
+[FSM]: from GEN_NEW_TRAJ to EXEC_TRAJ
+[FSM]: state: EXEC_TRAJ
+[FSM]: state: EXEC_TRAJ
+[FSM]: from EXEC_TRAJ to WAIT_TARGET
+Triggered!
+[TRIG]: from WAIT_TARGET to GEN_NEW_TRAJ
+[47;30m
+[drone 0 replan 11]==============================================[0m
+[32miter(+1)=33,time(ms)=0.227,total_t(ms)=0.228,cost=0.026
+[0mplan_success=1
+total time:[42m0.000398178[0m,optimize:0.00039264,refine:5.538e-06,avg_time=0.000512807
+refine_success=1
+[FSM]: from GEN_NEW_TRAJ to EXEC_TRAJ
+[FSM]: state: EXEC_TRAJ
+[FSM]: state: EXEC_TRAJ
+[FSM]: from EXEC_TRAJ to WAIT_TARGET
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+[FSM]: state: WAIT_TARGET
+wait for goal or trigger.
+^C[drone_0_traj_server-2] killing on exit
+[drone_0_ego_planner_node-1] killing on exit
+shutting down processing monitor...
+... shutting down processing monitor complete
+[1mdone[0m
+]0;jane@jane: ~/lidardrone[01;32mjane@jane[00m:[01;34m~/lidardrone[00m$ exit
+
+Script done on 2025-04-12 20:33:47+08:00 [COMMAND_EXIT_CODE="0"]

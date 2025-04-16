@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "/home/xxx/LidarDronevoid/devel/share/gennodejs/ros/traj_utils/msg/Bspline.js"
-  "/home/xxx/LidarDronevoid/devel/share/gennodejs/ros/traj_utils/msg/DataDisp.js"
-  "/home/xxx/LidarDronevoid/devel/share/gennodejs/ros/traj_utils/msg/MultiBsplines.js"
+  "/home/jane/lidardrone/devel/share/gennodejs/ros/traj_utils/msg/Bspline.js"
+  "/home/jane/lidardrone/devel/share/gennodejs/ros/traj_utils/msg/DataDisp.js"
+  "/home/jane/lidardrone/devel/share/gennodejs/ros/traj_utils/msg/MultiBsplines.js"
   "CMakeFiles/traj_utils_generate_messages_nodejs"
 )
 

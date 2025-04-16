@@ -1,8 +1,8 @@
-# Install script for directory: /home/xxx/LidarDronevoid/src/planner/utils/quadrotor_msgs
+# Install script for directory: /home/jane/lidardrone/src/planner/utils/quadrotor_msgs
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/xxx/LidarDronevoid/install")
+  set(CMAKE_INSTALL_PREFIX "/home/jane/lidardrone/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -39,67 +39,67 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/quadrotor_msgs/msg" TYPE FILE FILES
-    "/home/xxx/LidarDronevoid/src/planner/utils/quadrotor_msgs/msg/AuxCommand.msg"
-    "/home/xxx/LidarDronevoid/src/planner/utils/quadrotor_msgs/msg/Corrections.msg"
-    "/home/xxx/LidarDronevoid/src/planner/utils/quadrotor_msgs/msg/Gains.msg"
-    "/home/xxx/LidarDronevoid/src/planner/utils/quadrotor_msgs/msg/OutputData.msg"
-    "/home/xxx/LidarDronevoid/src/planner/utils/quadrotor_msgs/msg/PositionCommand.msg"
-    "/home/xxx/LidarDronevoid/src/planner/utils/quadrotor_msgs/msg/PPROutputData.msg"
-    "/home/xxx/LidarDronevoid/src/planner/utils/quadrotor_msgs/msg/Serial.msg"
-    "/home/xxx/LidarDronevoid/src/planner/utils/quadrotor_msgs/msg/SO3Command.msg"
-    "/home/xxx/LidarDronevoid/src/planner/utils/quadrotor_msgs/msg/StatusData.msg"
-    "/home/xxx/LidarDronevoid/src/planner/utils/quadrotor_msgs/msg/TRPYCommand.msg"
-    "/home/xxx/LidarDronevoid/src/planner/utils/quadrotor_msgs/msg/Odometry.msg"
-    "/home/xxx/LidarDronevoid/src/planner/utils/quadrotor_msgs/msg/PolynomialTrajectory.msg"
-    "/home/xxx/LidarDronevoid/src/planner/utils/quadrotor_msgs/msg/LQRTrajectory.msg"
-    "/home/xxx/LidarDronevoid/src/planner/utils/quadrotor_msgs/msg/GoalSet.msg"
+    "/home/jane/lidardrone/src/planner/utils/quadrotor_msgs/msg/AuxCommand.msg"
+    "/home/jane/lidardrone/src/planner/utils/quadrotor_msgs/msg/Corrections.msg"
+    "/home/jane/lidardrone/src/planner/utils/quadrotor_msgs/msg/Gains.msg"
+    "/home/jane/lidardrone/src/planner/utils/quadrotor_msgs/msg/OutputData.msg"
+    "/home/jane/lidardrone/src/planner/utils/quadrotor_msgs/msg/PositionCommand.msg"
+    "/home/jane/lidardrone/src/planner/utils/quadrotor_msgs/msg/PPROutputData.msg"
+    "/home/jane/lidardrone/src/planner/utils/quadrotor_msgs/msg/Serial.msg"
+    "/home/jane/lidardrone/src/planner/utils/quadrotor_msgs/msg/SO3Command.msg"
+    "/home/jane/lidardrone/src/planner/utils/quadrotor_msgs/msg/StatusData.msg"
+    "/home/jane/lidardrone/src/planner/utils/quadrotor_msgs/msg/TRPYCommand.msg"
+    "/home/jane/lidardrone/src/planner/utils/quadrotor_msgs/msg/Odometry.msg"
+    "/home/jane/lidardrone/src/planner/utils/quadrotor_msgs/msg/PolynomialTrajectory.msg"
+    "/home/jane/lidardrone/src/planner/utils/quadrotor_msgs/msg/LQRTrajectory.msg"
+    "/home/jane/lidardrone/src/planner/utils/quadrotor_msgs/msg/GoalSet.msg"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/quadrotor_msgs/cmake" TYPE FILE FILES "/home/xxx/LidarDronevoid/build/planner/utils/quadrotor_msgs/catkin_generated/installspace/quadrotor_msgs-msg-paths.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/quadrotor_msgs/cmake" TYPE FILE FILES "/home/jane/lidardrone/build/planner/utils/quadrotor_msgs/catkin_generated/installspace/quadrotor_msgs-msg-paths.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/xxx/LidarDronevoid/devel/include/quadrotor_msgs")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/jane/lidardrone/devel/include/quadrotor_msgs")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/xxx/LidarDronevoid/devel/share/roseus/ros/quadrotor_msgs")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/jane/lidardrone/devel/share/roseus/ros/quadrotor_msgs")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/xxx/LidarDronevoid/devel/share/common-lisp/ros/quadrotor_msgs")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/jane/lidardrone/devel/share/common-lisp/ros/quadrotor_msgs")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gennodejs/ros" TYPE DIRECTORY FILES "/home/xxx/LidarDronevoid/devel/share/gennodejs/ros/quadrotor_msgs")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gennodejs/ros" TYPE DIRECTORY FILES "/home/jane/lidardrone/devel/share/gennodejs/ros/quadrotor_msgs")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  execute_process(COMMAND "/usr/bin/python3" -m compileall "/home/xxx/LidarDronevoid/devel/lib/python3/dist-packages/quadrotor_msgs")
+  execute_process(COMMAND "/usr/bin/python3" -m compileall "/home/jane/lidardrone/devel/lib/python3/dist-packages/quadrotor_msgs")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3/dist-packages" TYPE DIRECTORY FILES "/home/xxx/LidarDronevoid/devel/lib/python3/dist-packages/quadrotor_msgs")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3/dist-packages" TYPE DIRECTORY FILES "/home/jane/lidardrone/devel/lib/python3/dist-packages/quadrotor_msgs")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/xxx/LidarDronevoid/build/planner/utils/quadrotor_msgs/catkin_generated/installspace/quadrotor_msgs.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/jane/lidardrone/build/planner/utils/quadrotor_msgs/catkin_generated/installspace/quadrotor_msgs.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/quadrotor_msgs/cmake" TYPE FILE FILES "/home/xxx/LidarDronevoid/build/planner/utils/quadrotor_msgs/catkin_generated/installspace/quadrotor_msgs-msg-extras.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/quadrotor_msgs/cmake" TYPE FILE FILES "/home/jane/lidardrone/build/planner/utils/quadrotor_msgs/catkin_generated/installspace/quadrotor_msgs-msg-extras.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/quadrotor_msgs/cmake" TYPE FILE FILES
-    "/home/xxx/LidarDronevoid/build/planner/utils/quadrotor_msgs/catkin_generated/installspace/quadrotor_msgsConfig.cmake"
-    "/home/xxx/LidarDronevoid/build/planner/utils/quadrotor_msgs/catkin_generated/installspace/quadrotor_msgsConfig-version.cmake"
+    "/home/jane/lidardrone/build/planner/utils/quadrotor_msgs/catkin_generated/installspace/quadrotor_msgsConfig.cmake"
+    "/home/jane/lidardrone/build/planner/utils/quadrotor_msgs/catkin_generated/installspace/quadrotor_msgsConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/quadrotor_msgs" TYPE FILE FILES "/home/xxx/LidarDronevoid/src/planner/utils/quadrotor_msgs/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/quadrotor_msgs" TYPE FILE FILES "/home/jane/lidardrone/src/planner/utils/quadrotor_msgs/package.xml")
 endif()
 

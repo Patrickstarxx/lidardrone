@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/xxx/LidarDronevoid/devel/lib/libpose_utils.pdb"
-  "/home/xxx/LidarDronevoid/devel/lib/libpose_utils.so"
+  "/home/jane/lidardrone/devel/lib/libpose_utils.pdb"
+  "/home/jane/lidardrone/devel/lib/libpose_utils.so"
   "CMakeFiles/pose_utils.dir/src/pose_utils.cpp.o"
 )
 

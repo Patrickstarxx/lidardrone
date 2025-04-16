@@ -35,6 +35,7 @@ const double max_speed = 1.0; // 最大速度
 float dt=0.02; //运行时间
 double integral = 0.0;    // 积分项
 double prev_error = 0.0;  // 上次误差
+bool have_ego=false;
 
 template<typename T>
 T clamp(const T& value, const T& min_val, const T& max_val) {
@@ -160,6 +161,7 @@ void Ctrl::twist_cb(const quadrotor_msgs::PositionCommand::ConstPtr& msg)//ego�
 	ego_vel_z = ego.velocity.z;
 	ego_yaw = ego.yaw;
 	ego_yaw_rate = ego.yaw_dot;
+    have_ego=true;
     ROS_WARN("twist_cb");
 }
 
@@ -195,22 +197,25 @@ void Ctrl::control(const ros::TimerEvent&)
             current_goal.type_mask = velocity_mask;
             current_goal.velocity.x = (now_x - position_x)*1;//now_x为初始位置;position_x为实时更新的当前位置
             current_goal.velocity.y = (now_y - position_y)*1;
-            current_goal.velocity.z = (1 - position_z)*1;
+            current_goal.velocity.z = (1.3 - position_z)*1;
             current_goal.yaw = now_yaw;
             ROS_INFO("无有效导航点，保持悬停\n");
         break;
         case NAV_MODE.TRAJ_TRACK:
-            current_goal.coordinate_frame = mavros_msgs::PositionTarget::FRAME_LOCAL_NED;//选择local系，一定要local系
-            current_goal.header.stamp = ros::Time::now();
-            current_goal.type_mask = velocity_mask;//这个就算对应的掩码设置，可以看mavros_msgs::PositionTarget消息格式
-            current_goal.velocity.x =  0.8 * ego_vel_x + (ego_pos_x - position_x)*0.6;
-            current_goal.velocity.y =  0.8 * ego_vel_y + (ego_pos_y - position_y)*0.6;
-            current_goal.velocity.z =  (ego_pos_z - position_z)*0.8;
-            if(allow_yaw)
-                current_goal.yaw = ego_yaw;
-            else
-                current_goal.yaw = now_yaw;
-            ROS_INFO("已触发控制器，当前EGO规划速度：velocity = %.2f\n", sqrt(pow(current_goal.velocity.x, 2)+pow(current_goal.velocity.y, 2)));
+            if(have_ego==true)
+            {
+                current_goal.coordinate_frame = mavros_msgs::PositionTarget::FRAME_LOCAL_NED;//选择local系，一定要local系
+                current_goal.header.stamp = ros::Time::now();
+                current_goal.type_mask = velocity_mask;//这个就算对应的掩码设置，可以看mavros_msgs::PositionTarget消息格式
+                current_goal.velocity.x =  0.8 * ego_vel_x + (ego_pos_x - position_x)*0.6;
+                current_goal.velocity.y =  0.8 * ego_vel_y + (ego_pos_y - position_y)*0.6;
+                current_goal.velocity.z =  (ego_pos_z - position_z)*0.8;
+                if(allow_yaw)
+                    current_goal.yaw = ego_yaw;
+                else
+                    current_goal.yaw = now_yaw;
+                ROS_INFO("已触发控制器，当前EGO规划速度：velocity = %.2f\n", sqrt(pow(current_goal.velocity.x, 2)+pow(current_goal.velocity.y, 2)));
+            }
         break;
         case NAV_MODE.CAM_TARGET:
         {

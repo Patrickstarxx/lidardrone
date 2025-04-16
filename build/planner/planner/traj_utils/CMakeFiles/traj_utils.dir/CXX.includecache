@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/xxx/LidarDronevoid/src/planner/planner/traj_utils/include/traj_utils/planning_visualization.h
+/home/jane/lidardrone/src/planner/planner/traj_utils/include/traj_utils/planning_visualization.h
 Eigen/Eigen
 -
 algorithm
@@ -24,17 +24,17 @@ visualization_msgs/MarkerArray.h
 stdlib.h
 -
 
-/home/xxx/LidarDronevoid/src/planner/planner/traj_utils/include/traj_utils/polynomial_traj.h
+/home/jane/lidardrone/src/planner/planner/traj_utils/include/traj_utils/polynomial_traj.h
 Eigen/Eigen
 -
 vector
 -
 
-/home/xxx/LidarDronevoid/src/planner/planner/traj_utils/src/planning_visualization.cpp
+/home/jane/lidardrone/src/planner/planner/traj_utils/src/planning_visualization.cpp
 traj_utils/planning_visualization.h
 -
 
-/home/xxx/LidarDronevoid/src/planner/planner/traj_utils/src/polynomial_traj.cpp
+/home/jane/lidardrone/src/planner/planner/traj_utils/src/polynomial_traj.cpp
 iostream
 -
 traj_utils/polynomial_traj.h

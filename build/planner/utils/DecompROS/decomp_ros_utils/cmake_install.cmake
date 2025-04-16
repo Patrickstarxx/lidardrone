@@ -1,8 +1,8 @@
-# Install script for directory: /home/xxx/LidarDronevoid/src/planner/utils/DecompROS/decomp_ros_utils
+# Install script for directory: /home/jane/lidardrone/src/planner/utils/DecompROS/decomp_ros_utils
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/xxx/LidarDronevoid/install")
+  set(CMAKE_INSTALL_PREFIX "/home/jane/lidardrone/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -44,7 +44,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libdecomp_rviz_plugins.so"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/xxx/LidarDronevoid/devel/lib/libdecomp_rviz_plugins.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/jane/lidardrone/devel/lib/libdecomp_rviz_plugins.so")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libdecomp_rviz_plugins.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libdecomp_rviz_plugins.so")
     file(RPATH_CHANGE
@@ -61,21 +61,21 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/xxx/LidarDronevoid/src/planner/utils/DecompROS/decomp_ros_utils/include/" FILES_MATCHING REGEX "/[^/]*\\.h$" REGEX "/[^/]*\\.hpp$" REGEX "/\\.svn$" EXCLUDE)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/jane/lidardrone/src/planner/utils/DecompROS/decomp_ros_utils/include/" FILES_MATCHING REGEX "/[^/]*\\.h$" REGEX "/[^/]*\\.hpp$" REGEX "/\\.svn$" EXCLUDE)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/xxx/LidarDronevoid/build/planner/utils/DecompROS/decomp_ros_utils/catkin_generated/installspace/decomp_ros_utils.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/jane/lidardrone/build/planner/utils/DecompROS/decomp_ros_utils/catkin_generated/installspace/decomp_ros_utils.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/decomp_ros_utils/cmake" TYPE FILE FILES
-    "/home/xxx/LidarDronevoid/build/planner/utils/DecompROS/decomp_ros_utils/catkin_generated/installspace/decomp_ros_utilsConfig.cmake"
-    "/home/xxx/LidarDronevoid/build/planner/utils/DecompROS/decomp_ros_utils/catkin_generated/installspace/decomp_ros_utilsConfig-version.cmake"
+    "/home/jane/lidardrone/build/planner/utils/DecompROS/decomp_ros_utils/catkin_generated/installspace/decomp_ros_utilsConfig.cmake"
+    "/home/jane/lidardrone/build/planner/utils/DecompROS/decomp_ros_utils/catkin_generated/installspace/decomp_ros_utilsConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/decomp_ros_utils" TYPE FILE FILES "/home/xxx/LidarDronevoid/src/planner/utils/DecompROS/decomp_ros_utils/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/decomp_ros_utils" TYPE FILE FILES "/home/jane/lidardrone/src/planner/utils/DecompROS/decomp_ros_utils/package.xml")
 endif()
 

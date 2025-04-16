@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/xxx/LidarDronevoid/devel/lib/libdecode_msgs.pdb"
-  "/home/xxx/LidarDronevoid/devel/lib/libdecode_msgs.so"
+  "/home/jane/lidardrone/devel/lib/libdecode_msgs.pdb"
+  "/home/jane/lidardrone/devel/lib/libdecode_msgs.so"
   "CMakeFiles/decode_msgs.dir/src/decode_msgs.cpp.o"
 )
 

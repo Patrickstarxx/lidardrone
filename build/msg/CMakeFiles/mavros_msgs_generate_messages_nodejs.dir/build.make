@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/xxx/LidarDronevoid/src
+CMAKE_SOURCE_DIR = /home/jane/lidardrone/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/xxx/LidarDronevoid/build
+CMAKE_BINARY_DIR = /home/jane/lidardrone/build
 
 # Utility rule file for mavros_msgs_generate_messages_nodejs.
 
@@ -63,10 +63,10 @@ msg/CMakeFiles/mavros_msgs_generate_messages_nodejs.dir/build: mavros_msgs_gener
 .PHONY : msg/CMakeFiles/mavros_msgs_generate_messages_nodejs.dir/build
 
 msg/CMakeFiles/mavros_msgs_generate_messages_nodejs.dir/clean:
-	cd /home/xxx/LidarDronevoid/build/msg && $(CMAKE_COMMAND) -P CMakeFiles/mavros_msgs_generate_messages_nodejs.dir/cmake_clean.cmake
+	cd /home/jane/lidardrone/build/msg && $(CMAKE_COMMAND) -P CMakeFiles/mavros_msgs_generate_messages_nodejs.dir/cmake_clean.cmake
 .PHONY : msg/CMakeFiles/mavros_msgs_generate_messages_nodejs.dir/clean
 
 msg/CMakeFiles/mavros_msgs_generate_messages_nodejs.dir/depend:
-	cd /home/xxx/LidarDronevoid/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/xxx/LidarDronevoid/src /home/xxx/LidarDronevoid/src/msg /home/xxx/LidarDronevoid/build /home/xxx/LidarDronevoid/build/msg /home/xxx/LidarDronevoid/build/msg/CMakeFiles/mavros_msgs_generate_messages_nodejs.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/jane/lidardrone/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jane/lidardrone/src /home/jane/lidardrone/src/msg /home/jane/lidardrone/build /home/jane/lidardrone/build/msg /home/jane/lidardrone/build/msg/CMakeFiles/mavros_msgs_generate_messages_nodejs.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : msg/CMakeFiles/mavros_msgs_generate_messages_nodejs.dir/depend
 

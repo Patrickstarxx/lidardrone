@@ -3,5 +3,5 @@
 -DROS_PACKAGE_NAME="rviz_plugins"
 -DROSCONSOLE_BACKEND_LOG4CXX
 -o
-/home/xxx/LidarDronevoid/build/planner/utils/rviz_plugins/src/moc_goal_tool.cpp
-/home/xxx/LidarDronevoid/src/planner/utils/rviz_plugins/src/goal_tool.h
+/home/jane/lidardrone/build/planner/utils/rviz_plugins/src/moc_goal_tool.cpp
+/home/jane/lidardrone/src/planner/utils/rviz_plugins/src/goal_tool.h

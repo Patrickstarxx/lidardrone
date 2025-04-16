@@ -1,8 +1,8 @@
-# Install script for directory: /home/xxx/LidarDronevoid/src/planner/utils/cmake_utils
+# Install script for directory: /home/jane/lidardrone/src/planner/utils/cmake_utils
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/xxx/LidarDronevoid/install")
+  set(CMAKE_INSTALL_PREFIX "/home/jane/lidardrone/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,25 +38,25 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/xxx/LidarDronevoid/build/planner/utils/cmake_utils/catkin_generated/installspace/cmake_utils.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/jane/lidardrone/build/planner/utils/cmake_utils/catkin_generated/installspace/cmake_utils.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cmake_utils/cmake" TYPE FILE FILES
-    "/home/xxx/LidarDronevoid/src/planner/utils/cmake_utils/cmake/arch.cmake"
-    "/home/xxx/LidarDronevoid/src/planner/utils/cmake_utils/cmake/cmake_modules.cmake"
-    "/home/xxx/LidarDronevoid/src/planner/utils/cmake_utils/cmake/color.cmake"
+    "/home/jane/lidardrone/src/planner/utils/cmake_utils/cmake/arch.cmake"
+    "/home/jane/lidardrone/src/planner/utils/cmake_utils/cmake/cmake_modules.cmake"
+    "/home/jane/lidardrone/src/planner/utils/cmake_utils/cmake/color.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cmake_utils/cmake" TYPE FILE FILES
-    "/home/xxx/LidarDronevoid/build/planner/utils/cmake_utils/catkin_generated/installspace/cmake_utilsConfig.cmake"
-    "/home/xxx/LidarDronevoid/build/planner/utils/cmake_utils/catkin_generated/installspace/cmake_utilsConfig-version.cmake"
+    "/home/jane/lidardrone/build/planner/utils/cmake_utils/catkin_generated/installspace/cmake_utilsConfig.cmake"
+    "/home/jane/lidardrone/build/planner/utils/cmake_utils/catkin_generated/installspace/cmake_utilsConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cmake_utils" TYPE FILE FILES "/home/xxx/LidarDronevoid/src/planner/utils/cmake_utils/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cmake_utils" TYPE FILE FILES "/home/jane/lidardrone/src/planner/utils/cmake_utils/package.xml")
 endif()
 

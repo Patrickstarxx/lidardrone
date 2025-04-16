@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/xxx/LidarDronevoid/src/planner/planner/traj_utils/src/planning_visualization.cpp" "/home/xxx/LidarDronevoid/build/planner/planner/traj_utils/CMakeFiles/traj_utils.dir/src/planning_visualization.cpp.o"
-  "/home/xxx/LidarDronevoid/src/planner/planner/traj_utils/src/polynomial_traj.cpp" "/home/xxx/LidarDronevoid/build/planner/planner/traj_utils/CMakeFiles/traj_utils.dir/src/polynomial_traj.cpp.o"
+  "/home/jane/lidardrone/src/planner/planner/traj_utils/src/planning_visualization.cpp" "/home/jane/lidardrone/build/planner/planner/traj_utils/CMakeFiles/traj_utils.dir/src/planning_visualization.cpp.o"
+  "/home/jane/lidardrone/src/planner/planner/traj_utils/src/polynomial_traj.cpp" "/home/jane/lidardrone/build/planner/planner/traj_utils/CMakeFiles/traj_utils.dir/src/polynomial_traj.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -22,10 +22,10 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/home/xxx/LidarDronevoid/devel/include"
+  "/home/jane/lidardrone/devel/include"
   "/usr/include/vtk-7.1"
   "/usr/include/freetype2"
-  "/home/xxx/LidarDronevoid/src/planner/planner/traj_utils/include"
+  "/home/jane/lidardrone/src/planner/planner/traj_utils/include"
   "/opt/ros/noetic/include"
   "/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
   "/usr/include/pcl-1.10"

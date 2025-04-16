@@ -1,8 +1,8 @@
-# Install script for directory: /home/xxx/LidarDronevoid/src/planner/utils/catkin_simple
+# Install script for directory: /home/jane/lidardrone/src/planner/utils/catkin_simple
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/xxx/LidarDronevoid/install")
+  set(CMAKE_INSTALL_PREFIX "/home/jane/lidardrone/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,21 +38,21 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/xxx/LidarDronevoid/build/planner/utils/catkin_simple/catkin_generated/installspace/catkin_simple.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/jane/lidardrone/build/planner/utils/catkin_simple/catkin_generated/installspace/catkin_simple.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/catkin_simple/cmake" TYPE FILE FILES "/home/xxx/LidarDronevoid/build/planner/utils/catkin_simple/catkin_generated/installspace/catkin_simple-extras.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/catkin_simple/cmake" TYPE FILE FILES "/home/jane/lidardrone/build/planner/utils/catkin_simple/catkin_generated/installspace/catkin_simple-extras.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/catkin_simple/cmake" TYPE FILE FILES
-    "/home/xxx/LidarDronevoid/build/planner/utils/catkin_simple/catkin_generated/installspace/catkin_simpleConfig.cmake"
-    "/home/xxx/LidarDronevoid/build/planner/utils/catkin_simple/catkin_generated/installspace/catkin_simpleConfig-version.cmake"
+    "/home/jane/lidardrone/build/planner/utils/catkin_simple/catkin_generated/installspace/catkin_simpleConfig.cmake"
+    "/home/jane/lidardrone/build/planner/utils/catkin_simple/catkin_generated/installspace/catkin_simpleConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/catkin_simple" TYPE FILE FILES "/home/xxx/LidarDronevoid/src/planner/utils/catkin_simple/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/catkin_simple" TYPE FILE FILES "/home/jane/lidardrone/src/planner/utils/catkin_simple/package.xml")
 endif()
 

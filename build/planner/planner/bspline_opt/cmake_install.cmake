@@ -1,8 +1,8 @@
-# Install script for directory: /home/xxx/LidarDronevoid/src/planner/planner/bspline_opt
+# Install script for directory: /home/jane/lidardrone/src/planner/planner/bspline_opt
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/xxx/LidarDronevoid/install")
+  set(CMAKE_INSTALL_PREFIX "/home/jane/lidardrone/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,17 +38,17 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/xxx/LidarDronevoid/build/planner/planner/bspline_opt/catkin_generated/installspace/bspline_opt.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/jane/lidardrone/build/planner/planner/bspline_opt/catkin_generated/installspace/bspline_opt.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/bspline_opt/cmake" TYPE FILE FILES
-    "/home/xxx/LidarDronevoid/build/planner/planner/bspline_opt/catkin_generated/installspace/bspline_optConfig.cmake"
-    "/home/xxx/LidarDronevoid/build/planner/planner/bspline_opt/catkin_generated/installspace/bspline_optConfig-version.cmake"
+    "/home/jane/lidardrone/build/planner/planner/bspline_opt/catkin_generated/installspace/bspline_optConfig.cmake"
+    "/home/jane/lidardrone/build/planner/planner/bspline_opt/catkin_generated/installspace/bspline_optConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/bspline_opt" TYPE FILE FILES "/home/xxx/LidarDronevoid/src/planner/planner/bspline_opt/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/bspline_opt" TYPE FILE FILES "/home/jane/lidardrone/src/planner/planner/bspline_opt/package.xml")
 endif()
 

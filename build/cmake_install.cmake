@@ -1,8 +1,8 @@
-# Install script for directory: /home/xxx/LidarDronevoid/src
+# Install script for directory: /home/jane/lidardrone/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/xxx/LidarDronevoid/install")
+  set(CMAKE_INSTALL_PREFIX "/home/jane/lidardrone/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -49,107 +49,107 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/xxx/LidarDronevoid/install/_setup_util.py")
+   "/home/jane/lidardrone/install/_setup_util.py")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/xxx/LidarDronevoid/install" TYPE PROGRAM FILES "/home/xxx/LidarDronevoid/build/catkin_generated/installspace/_setup_util.py")
+file(INSTALL DESTINATION "/home/jane/lidardrone/install" TYPE PROGRAM FILES "/home/jane/lidardrone/build/catkin_generated/installspace/_setup_util.py")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/xxx/LidarDronevoid/install/env.sh")
+   "/home/jane/lidardrone/install/env.sh")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/xxx/LidarDronevoid/install" TYPE PROGRAM FILES "/home/xxx/LidarDronevoid/build/catkin_generated/installspace/env.sh")
+file(INSTALL DESTINATION "/home/jane/lidardrone/install" TYPE PROGRAM FILES "/home/jane/lidardrone/build/catkin_generated/installspace/env.sh")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/xxx/LidarDronevoid/install/setup.bash;/home/xxx/LidarDronevoid/install/local_setup.bash")
+   "/home/jane/lidardrone/install/setup.bash;/home/jane/lidardrone/install/local_setup.bash")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/xxx/LidarDronevoid/install" TYPE FILE FILES
-    "/home/xxx/LidarDronevoid/build/catkin_generated/installspace/setup.bash"
-    "/home/xxx/LidarDronevoid/build/catkin_generated/installspace/local_setup.bash"
+file(INSTALL DESTINATION "/home/jane/lidardrone/install" TYPE FILE FILES
+    "/home/jane/lidardrone/build/catkin_generated/installspace/setup.bash"
+    "/home/jane/lidardrone/build/catkin_generated/installspace/local_setup.bash"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/xxx/LidarDronevoid/install/setup.sh;/home/xxx/LidarDronevoid/install/local_setup.sh")
+   "/home/jane/lidardrone/install/setup.sh;/home/jane/lidardrone/install/local_setup.sh")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/xxx/LidarDronevoid/install" TYPE FILE FILES
-    "/home/xxx/LidarDronevoid/build/catkin_generated/installspace/setup.sh"
-    "/home/xxx/LidarDronevoid/build/catkin_generated/installspace/local_setup.sh"
+file(INSTALL DESTINATION "/home/jane/lidardrone/install" TYPE FILE FILES
+    "/home/jane/lidardrone/build/catkin_generated/installspace/setup.sh"
+    "/home/jane/lidardrone/build/catkin_generated/installspace/local_setup.sh"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/xxx/LidarDronevoid/install/setup.zsh;/home/xxx/LidarDronevoid/install/local_setup.zsh")
+   "/home/jane/lidardrone/install/setup.zsh;/home/jane/lidardrone/install/local_setup.zsh")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/xxx/LidarDronevoid/install" TYPE FILE FILES
-    "/home/xxx/LidarDronevoid/build/catkin_generated/installspace/setup.zsh"
-    "/home/xxx/LidarDronevoid/build/catkin_generated/installspace/local_setup.zsh"
+file(INSTALL DESTINATION "/home/jane/lidardrone/install" TYPE FILE FILES
+    "/home/jane/lidardrone/build/catkin_generated/installspace/setup.zsh"
+    "/home/jane/lidardrone/build/catkin_generated/installspace/local_setup.zsh"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/xxx/LidarDronevoid/install/.rosinstall")
+   "/home/jane/lidardrone/install/.rosinstall")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/xxx/LidarDronevoid/install" TYPE FILE FILES "/home/xxx/LidarDronevoid/build/catkin_generated/installspace/.rosinstall")
+file(INSTALL DESTINATION "/home/jane/lidardrone/install" TYPE FILE FILES "/home/jane/lidardrone/build/catkin_generated/installspace/.rosinstall")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/xxx/LidarDronevoid/build/gtest/cmake_install.cmake")
-  include("/home/xxx/LidarDronevoid/build/planner/utils/catkin_simple/cmake_install.cmake")
-  include("/home/xxx/LidarDronevoid/build/planner/utils/DecompROS/decomp_ros_msgs/cmake_install.cmake")
-  include("/home/xxx/LidarDronevoid/build/planner/utils/quadrotor_msgs/cmake_install.cmake")
-  include("/home/xxx/LidarDronevoid/build/cam/cmake_install.cmake")
-  include("/home/xxx/LidarDronevoid/build/planner/utils/cmake_utils/cmake_install.cmake")
-  include("/home/xxx/LidarDronevoid/build/planner/planner/plan_env/cmake_install.cmake")
-  include("/home/xxx/LidarDronevoid/build/planner/planner/path_searching/cmake_install.cmake")
-  include("/home/xxx/LidarDronevoid/build/planner/utils/pose_utils/cmake_install.cmake")
-  include("/home/xxx/LidarDronevoid/build/planner/planner/drone_detect/cmake_install.cmake")
-  include("/home/xxx/LidarDronevoid/build/msg/cmake_install.cmake")
-  include("/home/xxx/LidarDronevoid/build/offb_bag/cmake_install.cmake")
-  include("/home/xxx/LidarDronevoid/build/controller/cmake_install.cmake")
-  include("/home/xxx/LidarDronevoid/build/planner/planner/traj_utils/cmake_install.cmake")
-  include("/home/xxx/LidarDronevoid/build/planner/planner/bspline_opt/cmake_install.cmake")
-  include("/home/xxx/LidarDronevoid/build/planner/planner/plan_manage/cmake_install.cmake")
-  include("/home/xxx/LidarDronevoid/build/planner/planner/rosmsg_tcp_bridge/cmake_install.cmake")
-  include("/home/xxx/LidarDronevoid/build/planner/utils/uav_utils/cmake_install.cmake")
-  include("/home/xxx/LidarDronevoid/build/planner/utils/DecompROS/decomp_ros_utils/cmake_install.cmake")
-  include("/home/xxx/LidarDronevoid/build/planner/utils/rviz_plugins/cmake_install.cmake")
+  include("/home/jane/lidardrone/build/gtest/cmake_install.cmake")
+  include("/home/jane/lidardrone/build/planner/utils/catkin_simple/cmake_install.cmake")
+  include("/home/jane/lidardrone/build/planner/utils/DecompROS/decomp_ros_msgs/cmake_install.cmake")
+  include("/home/jane/lidardrone/build/planner/utils/quadrotor_msgs/cmake_install.cmake")
+  include("/home/jane/lidardrone/build/cam/cmake_install.cmake")
+  include("/home/jane/lidardrone/build/planner/utils/cmake_utils/cmake_install.cmake")
+  include("/home/jane/lidardrone/build/planner/planner/plan_env/cmake_install.cmake")
+  include("/home/jane/lidardrone/build/planner/planner/path_searching/cmake_install.cmake")
+  include("/home/jane/lidardrone/build/planner/utils/pose_utils/cmake_install.cmake")
+  include("/home/jane/lidardrone/build/planner/planner/drone_detect/cmake_install.cmake")
+  include("/home/jane/lidardrone/build/msg/cmake_install.cmake")
+  include("/home/jane/lidardrone/build/offb_bag/cmake_install.cmake")
+  include("/home/jane/lidardrone/build/controller/cmake_install.cmake")
+  include("/home/jane/lidardrone/build/planner/planner/traj_utils/cmake_install.cmake")
+  include("/home/jane/lidardrone/build/planner/planner/bspline_opt/cmake_install.cmake")
+  include("/home/jane/lidardrone/build/planner/planner/plan_manage/cmake_install.cmake")
+  include("/home/jane/lidardrone/build/planner/planner/rosmsg_tcp_bridge/cmake_install.cmake")
+  include("/home/jane/lidardrone/build/planner/utils/uav_utils/cmake_install.cmake")
+  include("/home/jane/lidardrone/build/planner/utils/DecompROS/decomp_ros_utils/cmake_install.cmake")
+  include("/home/jane/lidardrone/build/planner/utils/rviz_plugins/cmake_install.cmake")
 
 endif()
 
@@ -161,5 +161,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/xxx/LidarDronevoid/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/jane/lidardrone/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

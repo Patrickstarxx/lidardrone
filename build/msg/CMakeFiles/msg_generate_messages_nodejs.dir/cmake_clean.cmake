@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/xxx/LidarDronevoid/devel/share/gennodejs/ros/msg/msg/NAV_WYPT_MODE.js"
-  "/home/xxx/LidarDronevoid/devel/share/gennodejs/ros/msg/msg/NAV_WYPT_TYPE_SWITCH.js"
+  "/home/jane/lidardrone/devel/share/gennodejs/ros/msg/msg/NAV_WYPT_MODE.js"
+  "/home/jane/lidardrone/devel/share/gennodejs/ros/msg/msg/NAV_WYPT_TYPE_SWITCH.js"
   "CMakeFiles/msg_generate_messages_nodejs"
 )
 

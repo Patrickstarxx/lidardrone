@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/xxx/LidarDronevoid/devel/lib/controller/cxr_egoctrl_v1"
-  "/home/xxx/LidarDronevoid/devel/lib/controller/cxr_egoctrl_v1.pdb"
+  "/home/jane/lidardrone/devel/lib/controller/cxr_egoctrl_v1"
+  "/home/jane/lidardrone/devel/lib/controller/cxr_egoctrl_v1.pdb"
   "CMakeFiles/cxr_egoctrl_v1.dir/src/cxr_egoctrl_v1.cpp.o"
 )
 

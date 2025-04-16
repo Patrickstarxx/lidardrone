@@ -1,8 +1,8 @@
-prefix=/home/xxx/LidarDronevoid/devel
+prefix=/home/jane/lidardrone/devel
 
 Name: decomp_ros_utils
 Description: Description of decomp_ros_utils
 Version: 0.0.0
-Cflags: -I/home/xxx/LidarDronevoid/src/planner/utils/DecompROS/decomp_ros_utils/include
+Cflags: -I/home/jane/lidardrone/src/planner/utils/DecompROS/decomp_ros_utils/include
 Libs: -L${prefix}/lib -ldecomp_rviz_plugins
 Requires: roscpp rviz decomp_ros_msgs

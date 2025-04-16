@@ -43,41 +43,41 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/xxx/LidarDronevoid/src
+CMAKE_SOURCE_DIR = /home/jane/lidardrone/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/xxx/LidarDronevoid/build
+CMAKE_BINARY_DIR = /home/jane/lidardrone/build
 
 # Utility rule file for msg_generate_messages_py.
 
 # Include the progress variables for this target.
 include msg/CMakeFiles/msg_generate_messages_py.dir/progress.make
 
-msg/CMakeFiles/msg_generate_messages_py: /home/xxx/LidarDronevoid/devel/lib/python3/dist-packages/msg/msg/_NAV_WYPT_MODE.py
-msg/CMakeFiles/msg_generate_messages_py: /home/xxx/LidarDronevoid/devel/lib/python3/dist-packages/msg/msg/_NAV_WYPT_TYPE_SWITCH.py
-msg/CMakeFiles/msg_generate_messages_py: /home/xxx/LidarDronevoid/devel/lib/python3/dist-packages/msg/msg/__init__.py
+msg/CMakeFiles/msg_generate_messages_py: /home/jane/lidardrone/devel/lib/python3/dist-packages/msg/msg/_NAV_WYPT_MODE.py
+msg/CMakeFiles/msg_generate_messages_py: /home/jane/lidardrone/devel/lib/python3/dist-packages/msg/msg/_NAV_WYPT_TYPE_SWITCH.py
+msg/CMakeFiles/msg_generate_messages_py: /home/jane/lidardrone/devel/lib/python3/dist-packages/msg/msg/__init__.py
 
 
-/home/xxx/LidarDronevoid/devel/lib/python3/dist-packages/msg/msg/_NAV_WYPT_MODE.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
-/home/xxx/LidarDronevoid/devel/lib/python3/dist-packages/msg/msg/_NAV_WYPT_MODE.py: /home/xxx/LidarDronevoid/src/msg/msg/NAV_WYPT_MODE.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/xxx/LidarDronevoid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python from MSG msg/NAV_WYPT_MODE"
-	cd /home/xxx/LidarDronevoid/build/msg && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/xxx/LidarDronevoid/src/msg/msg/NAV_WYPT_MODE.msg -Imsg:/home/xxx/LidarDronevoid/src/msg/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p msg -o /home/xxx/LidarDronevoid/devel/lib/python3/dist-packages/msg/msg
+/home/jane/lidardrone/devel/lib/python3/dist-packages/msg/msg/_NAV_WYPT_MODE.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
+/home/jane/lidardrone/devel/lib/python3/dist-packages/msg/msg/_NAV_WYPT_MODE.py: /home/jane/lidardrone/src/msg/msg/NAV_WYPT_MODE.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/jane/lidardrone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python from MSG msg/NAV_WYPT_MODE"
+	cd /home/jane/lidardrone/build/msg && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/jane/lidardrone/src/msg/msg/NAV_WYPT_MODE.msg -Imsg:/home/jane/lidardrone/src/msg/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p msg -o /home/jane/lidardrone/devel/lib/python3/dist-packages/msg/msg
 
-/home/xxx/LidarDronevoid/devel/lib/python3/dist-packages/msg/msg/_NAV_WYPT_TYPE_SWITCH.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
-/home/xxx/LidarDronevoid/devel/lib/python3/dist-packages/msg/msg/_NAV_WYPT_TYPE_SWITCH.py: /home/xxx/LidarDronevoid/src/msg/msg/NAV_WYPT_TYPE_SWITCH.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/xxx/LidarDronevoid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python from MSG msg/NAV_WYPT_TYPE_SWITCH"
-	cd /home/xxx/LidarDronevoid/build/msg && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/xxx/LidarDronevoid/src/msg/msg/NAV_WYPT_TYPE_SWITCH.msg -Imsg:/home/xxx/LidarDronevoid/src/msg/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p msg -o /home/xxx/LidarDronevoid/devel/lib/python3/dist-packages/msg/msg
+/home/jane/lidardrone/devel/lib/python3/dist-packages/msg/msg/_NAV_WYPT_TYPE_SWITCH.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
+/home/jane/lidardrone/devel/lib/python3/dist-packages/msg/msg/_NAV_WYPT_TYPE_SWITCH.py: /home/jane/lidardrone/src/msg/msg/NAV_WYPT_TYPE_SWITCH.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/jane/lidardrone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python from MSG msg/NAV_WYPT_TYPE_SWITCH"
+	cd /home/jane/lidardrone/build/msg && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/jane/lidardrone/src/msg/msg/NAV_WYPT_TYPE_SWITCH.msg -Imsg:/home/jane/lidardrone/src/msg/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p msg -o /home/jane/lidardrone/devel/lib/python3/dist-packages/msg/msg
 
-/home/xxx/LidarDronevoid/devel/lib/python3/dist-packages/msg/msg/__init__.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
-/home/xxx/LidarDronevoid/devel/lib/python3/dist-packages/msg/msg/__init__.py: /home/xxx/LidarDronevoid/devel/lib/python3/dist-packages/msg/msg/_NAV_WYPT_MODE.py
-/home/xxx/LidarDronevoid/devel/lib/python3/dist-packages/msg/msg/__init__.py: /home/xxx/LidarDronevoid/devel/lib/python3/dist-packages/msg/msg/_NAV_WYPT_TYPE_SWITCH.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/xxx/LidarDronevoid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Python msg __init__.py for msg"
-	cd /home/xxx/LidarDronevoid/build/msg && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/xxx/LidarDronevoid/devel/lib/python3/dist-packages/msg/msg --initpy
+/home/jane/lidardrone/devel/lib/python3/dist-packages/msg/msg/__init__.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
+/home/jane/lidardrone/devel/lib/python3/dist-packages/msg/msg/__init__.py: /home/jane/lidardrone/devel/lib/python3/dist-packages/msg/msg/_NAV_WYPT_MODE.py
+/home/jane/lidardrone/devel/lib/python3/dist-packages/msg/msg/__init__.py: /home/jane/lidardrone/devel/lib/python3/dist-packages/msg/msg/_NAV_WYPT_TYPE_SWITCH.py
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/jane/lidardrone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Python msg __init__.py for msg"
+	cd /home/jane/lidardrone/build/msg && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/jane/lidardrone/devel/lib/python3/dist-packages/msg/msg --initpy
 
 msg_generate_messages_py: msg/CMakeFiles/msg_generate_messages_py
-msg_generate_messages_py: /home/xxx/LidarDronevoid/devel/lib/python3/dist-packages/msg/msg/_NAV_WYPT_MODE.py
-msg_generate_messages_py: /home/xxx/LidarDronevoid/devel/lib/python3/dist-packages/msg/msg/_NAV_WYPT_TYPE_SWITCH.py
-msg_generate_messages_py: /home/xxx/LidarDronevoid/devel/lib/python3/dist-packages/msg/msg/__init__.py
+msg_generate_messages_py: /home/jane/lidardrone/devel/lib/python3/dist-packages/msg/msg/_NAV_WYPT_MODE.py
+msg_generate_messages_py: /home/jane/lidardrone/devel/lib/python3/dist-packages/msg/msg/_NAV_WYPT_TYPE_SWITCH.py
+msg_generate_messages_py: /home/jane/lidardrone/devel/lib/python3/dist-packages/msg/msg/__init__.py
 msg_generate_messages_py: msg/CMakeFiles/msg_generate_messages_py.dir/build.make
 
 .PHONY : msg_generate_messages_py
@@ -88,10 +88,10 @@ msg/CMakeFiles/msg_generate_messages_py.dir/build: msg_generate_messages_py
 .PHONY : msg/CMakeFiles/msg_generate_messages_py.dir/build
 
 msg/CMakeFiles/msg_generate_messages_py.dir/clean:
-	cd /home/xxx/LidarDronevoid/build/msg && $(CMAKE_COMMAND) -P CMakeFiles/msg_generate_messages_py.dir/cmake_clean.cmake
+	cd /home/jane/lidardrone/build/msg && $(CMAKE_COMMAND) -P CMakeFiles/msg_generate_messages_py.dir/cmake_clean.cmake
 .PHONY : msg/CMakeFiles/msg_generate_messages_py.dir/clean
 
 msg/CMakeFiles/msg_generate_messages_py.dir/depend:
-	cd /home/xxx/LidarDronevoid/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/xxx/LidarDronevoid/src /home/xxx/LidarDronevoid/src/msg /home/xxx/LidarDronevoid/build /home/xxx/LidarDronevoid/build/msg /home/xxx/LidarDronevoid/build/msg/CMakeFiles/msg_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/jane/lidardrone/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jane/lidardrone/src /home/jane/lidardrone/src/msg /home/jane/lidardrone/build /home/jane/lidardrone/build/msg /home/jane/lidardrone/build/msg/CMakeFiles/msg_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : msg/CMakeFiles/msg_generate_messages_py.dir/depend
 

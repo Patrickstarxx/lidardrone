@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/xxx/LidarDronevoid/src/planner/planner/plan_env/include/plan_env/linear_obj_model.hpp
+/home/jane/lidardrone/src/planner/planner/plan_env/include/plan_env/linear_obj_model.hpp
 Eigen/Eigen
 -
 algorithm
@@ -14,9 +14,9 @@ algorithm
 iostream
 -
 
-/home/xxx/LidarDronevoid/src/planner/planner/plan_env/src/obj_generator.cpp
+/home/jane/lidardrone/src/planner/planner/plan_env/src/obj_generator.cpp
 visualization_msgs/Marker.h
-/home/xxx/LidarDronevoid/src/planner/planner/plan_env/src/visualization_msgs/Marker.h
+/home/jane/lidardrone/src/planner/planner/plan_env/src/visualization_msgs/Marker.h
 ros/ros.h
 -
 geometry_msgs/PoseStamped.h

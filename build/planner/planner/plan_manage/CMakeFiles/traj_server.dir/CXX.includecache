@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/xxx/LidarDronevoid/devel/include/quadrotor_msgs/PositionCommand.h
+/home/jane/lidardrone/devel/include/quadrotor_msgs/PositionCommand.h
 string
 -
 vector
@@ -30,7 +30,7 @@ geometry_msgs/Vector3.h
 geometry_msgs/Vector3.h
 -
 
-/home/xxx/LidarDronevoid/devel/include/traj_utils/Bspline.h
+/home/jane/lidardrone/devel/include/traj_utils/Bspline.h
 string
 -
 vector
@@ -48,7 +48,7 @@ ros/message_operations.h
 geometry_msgs/Point.h
 -
 
-/home/xxx/LidarDronevoid/src/planner/planner/bspline_opt/include/bspline_opt/uniform_bspline.h
+/home/jane/lidardrone/src/planner/planner/bspline_opt/include/bspline_opt/uniform_bspline.h
 Eigen/Eigen
 -
 algorithm
@@ -56,19 +56,19 @@ algorithm
 iostream
 -
 
-/home/xxx/LidarDronevoid/src/planner/planner/plan_manage/src/traj_server.cpp
+/home/jane/lidardrone/src/planner/planner/plan_manage/src/traj_server.cpp
 bspline_opt/uniform_bspline.h
-/home/xxx/LidarDronevoid/src/planner/planner/plan_manage/src/bspline_opt/uniform_bspline.h
+/home/jane/lidardrone/src/planner/planner/plan_manage/src/bspline_opt/uniform_bspline.h
 nav_msgs/Odometry.h
-/home/xxx/LidarDronevoid/src/planner/planner/plan_manage/src/nav_msgs/Odometry.h
+/home/jane/lidardrone/src/planner/planner/plan_manage/src/nav_msgs/Odometry.h
 traj_utils/Bspline.h
-/home/xxx/LidarDronevoid/src/planner/planner/plan_manage/src/traj_utils/Bspline.h
+/home/jane/lidardrone/src/planner/planner/plan_manage/src/traj_utils/Bspline.h
 quadrotor_msgs/PositionCommand.h
-/home/xxx/LidarDronevoid/src/planner/planner/plan_manage/src/quadrotor_msgs/PositionCommand.h
+/home/jane/lidardrone/src/planner/planner/plan_manage/src/quadrotor_msgs/PositionCommand.h
 std_msgs/Empty.h
-/home/xxx/LidarDronevoid/src/planner/planner/plan_manage/src/std_msgs/Empty.h
+/home/jane/lidardrone/src/planner/planner/plan_manage/src/std_msgs/Empty.h
 visualization_msgs/Marker.h
-/home/xxx/LidarDronevoid/src/planner/planner/plan_manage/src/visualization_msgs/Marker.h
+/home/jane/lidardrone/src/planner/planner/plan_manage/src/visualization_msgs/Marker.h
 ros/ros.h
 -
 

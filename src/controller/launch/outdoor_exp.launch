@@ -1,0 +1,43 @@
+
+
+<launch>
+  <!-- 完全匹配 geometry_msgs/PoseStamped 结构 -->
+  <rosparam param="/waypoints">
+    - header:
+        frame_id: "map"
+      pose:
+        position: {x: 2.0, y: 0.0, z: 1.5}
+        orientation: {x: 0.0, y: 0.0, z: 0.0, w: 1.0}
+    - header:
+        frame_id: "map"
+      pose:
+        position: {x: 3.0, y: 1.0, z: 1.5}
+        orientation: {x: 0.0, y: 0.0, z: 0.0, w: 1.0}
+<!--     - header:
+        frame_id: "map"
+      pose:
+        position: {x: 5.5, y: -1.5, z: 1.5}
+        orientation: {x: 0.0, y: 0.0, z: 0.0, w: 1.0}
+    - header:
+        frame_id: "map"
+      pose:
+        position: {x: 6.5, y: 2.0, z: 1.5}
+        orientation: {x: 0.0, y: 0.0, z: 0.0, w: 1.0}
+    - header:
+        frame_id: "map"
+      pose:
+        position: {x: 0.0, y: -1.5, z: 1.5}
+        orientation: {x: 0.0, y: 0.0, z: 0.0, w: 1.0}
+    - header:
+        frame_id: "map"
+      pose:
+        position: {x: 0.0, y: 0, z: 1.0}
+        orientation: {x: 0.0, y: 0.0, z: 0.0, w: 1.0} -->
+  </rosparam>
+    <!-- 加载预设导航点 -->
+  <!--rosparam command="load" file="$(find controller)/config/waypoints.yaml" /-->
+
+  <!-- 启动导航点发布节点 -->
+  <node name="offb_NAV" pkg="controller" type="offb_NAV" output="screen"/>
+
+</launch>

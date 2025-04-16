@@ -1,4 +1,4 @@
-prefix=/home/xxx/LidarDronevoid/devel
+prefix=/home/jane/lidardrone/devel
 
 Name: cmake_utils
 Description: Description of cmake_utils

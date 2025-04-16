@@ -1,8 +1,8 @@
-# Install script for directory: /home/xxx/LidarDronevoid/src/planner/utils/pose_utils
+# Install script for directory: /home/jane/lidardrone/src/planner/utils/pose_utils
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/xxx/LidarDronevoid/install")
+  set(CMAKE_INSTALL_PREFIX "/home/jane/lidardrone/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,17 +38,17 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/xxx/LidarDronevoid/build/planner/utils/pose_utils/catkin_generated/installspace/pose_utils.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/jane/lidardrone/build/planner/utils/pose_utils/catkin_generated/installspace/pose_utils.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/pose_utils/cmake" TYPE FILE FILES
-    "/home/xxx/LidarDronevoid/build/planner/utils/pose_utils/catkin_generated/installspace/pose_utilsConfig.cmake"
-    "/home/xxx/LidarDronevoid/build/planner/utils/pose_utils/catkin_generated/installspace/pose_utilsConfig-version.cmake"
+    "/home/jane/lidardrone/build/planner/utils/pose_utils/catkin_generated/installspace/pose_utilsConfig.cmake"
+    "/home/jane/lidardrone/build/planner/utils/pose_utils/catkin_generated/installspace/pose_utilsConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/pose_utils" TYPE FILE FILES "/home/xxx/LidarDronevoid/src/planner/utils/pose_utils/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/pose_utils" TYPE FILE FILES "/home/jane/lidardrone/src/planner/utils/pose_utils/package.xml")
 endif()
 

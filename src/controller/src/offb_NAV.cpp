@@ -148,17 +148,24 @@ geometry_msgs::PoseStamped getNextNavGoal()
 	
 }
 
-bool goalReached(geometry_msgs::PoseStamped& msg)
+bool goalReached(geometry_msgs::PoseStamped& msg, char z)
 {
 	if(!get_oringin_pos)//未收到里程计定位数据时返回false
 	{
 		return false;
-	}
+	}	
 	dx=local_pos.pose.position.x - msg.pose.position.x;
 	dy=local_pos.pose.position.y - msg.pose.position.y;
-	dz=local_pos.pose.position.z - msg.pose.position.z;
 	//ROS_WARN("x=%f,y=%f,z=%f",msg.pose.position.x,msg.pose.position.y,msg.pose.position.z);
-	if(sqrt(dx*dx + dy*dy) <= tolerance)
+	if(z!=0)
+	{
+		dz=local_pos.pose.position.z - msg.pose.position.z;
+	}
+	else
+	{
+		dz=0;
+	}
+	if(sqrt(dx*dx + dy*dy + dz*dz) <= tolerance)
 	{
 		return true;
 	}
@@ -302,9 +309,9 @@ int main(int argc, char **argv)
 
 			if(!mission_start)
 			{next_poniit_flag=true;mission_start=true;ros::Duration(5).sleep();}
-			if(preset_flag==true && goalReached(_WayPoints))
+			if(preset_flag==true && goalReached(_WayPoints,1))
 			{next_poniit_flag=true;ROS_WARN("wypt_reached");}
-			if(rviz_flag==true && goalReached(rviz_goal))
+			if(rviz_flag==true && goalReached(rviz_goal,0))
 			{next_poniit_flag=true;ROS_WARN("rviz reached");}
 /* 			if(preset_flag==true && goalmanulreached)
 			{next_poniit_flag=true;ROS_WARN("wypt_reached");goalmanulreached=false;}
@@ -371,7 +378,7 @@ int main(int argc, char **argv)
 		case NWTS.NAV_WYPT_RETURN://返回起飞点并降落
 			NWM.nav_mode = NWM.RETURN;
 			nav_wypt_mode_pb.publish(NWM);
-			if(!goalReached(home_pos))
+			if(!goalReached(home_pos,0))
 			{
 				nav_goal_pb.publish(home_pos);
 				ROS_WARN("RETURN");

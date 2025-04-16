@@ -1,8 +1,8 @@
-# Install script for directory: /home/xxx/LidarDronevoid/src/planner/planner/drone_detect
+# Install script for directory: /home/jane/lidardrone/src/planner/planner/drone_detect
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/xxx/LidarDronevoid/install")
+  set(CMAKE_INSTALL_PREFIX "/home/jane/lidardrone/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,18 +38,18 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/xxx/LidarDronevoid/build/planner/planner/drone_detect/catkin_generated/installspace/drone_detect.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/jane/lidardrone/build/planner/planner/drone_detect/catkin_generated/installspace/drone_detect.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/drone_detect/cmake" TYPE FILE FILES
-    "/home/xxx/LidarDronevoid/build/planner/planner/drone_detect/catkin_generated/installspace/drone_detectConfig.cmake"
-    "/home/xxx/LidarDronevoid/build/planner/planner/drone_detect/catkin_generated/installspace/drone_detectConfig-version.cmake"
+    "/home/jane/lidardrone/build/planner/planner/drone_detect/catkin_generated/installspace/drone_detectConfig.cmake"
+    "/home/jane/lidardrone/build/planner/planner/drone_detect/catkin_generated/installspace/drone_detectConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/drone_detect" TYPE FILE FILES "/home/xxx/LidarDronevoid/src/planner/planner/drone_detect/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/drone_detect" TYPE FILE FILES "/home/jane/lidardrone/src/planner/planner/drone_detect/package.xml")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -59,7 +59,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/drone_detect/drone_detect"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/drone_detect" TYPE EXECUTABLE FILES "/home/xxx/LidarDronevoid/devel/lib/drone_detect/drone_detect")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/drone_detect" TYPE EXECUTABLE FILES "/home/jane/lidardrone/devel/lib/drone_detect/drone_detect")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/drone_detect/drone_detect" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/drone_detect/drone_detect")
     file(RPATH_CHANGE
@@ -73,10 +73,10 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/drone_detect" TYPE DIRECTORY FILES "/home/xxx/LidarDronevoid/src/planner/planner/drone_detect/include/drone_detect/" FILES_MATCHING REGEX "/[^/]*\\.h$")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/drone_detect" TYPE DIRECTORY FILES "/home/jane/lidardrone/src/planner/planner/drone_detect/include/drone_detect/" FILES_MATCHING REGEX "/[^/]*\\.h$")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/drone_detect" TYPE DIRECTORY FILES "/home/xxx/LidarDronevoid/src/planner/planner/drone_detect/doc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/drone_detect" TYPE DIRECTORY FILES "/home/jane/lidardrone/src/planner/planner/drone_detect/doc")
 endif()
 

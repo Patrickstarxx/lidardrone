@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
-  "/home/xxx/LidarDronevoid/devel/include/decomp_ros_msgs/Ellipsoid.h"
-  "/home/xxx/LidarDronevoid/devel/include/decomp_ros_msgs/EllipsoidArray.h"
-  "/home/xxx/LidarDronevoid/devel/include/decomp_ros_msgs/Polyhedron.h"
-  "/home/xxx/LidarDronevoid/devel/include/decomp_ros_msgs/PolyhedronArray.h"
+  "/home/jane/lidardrone/devel/include/decomp_ros_msgs/Ellipsoid.h"
+  "/home/jane/lidardrone/devel/include/decomp_ros_msgs/EllipsoidArray.h"
+  "/home/jane/lidardrone/devel/include/decomp_ros_msgs/Polyhedron.h"
+  "/home/jane/lidardrone/devel/include/decomp_ros_msgs/PolyhedronArray.h"
   "CMakeFiles/decomp_ros_msgs_generate_messages_cpp"
 )
 

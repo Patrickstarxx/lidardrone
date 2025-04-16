@@ -7,4 +7,7 @@
 # new environment variables
 
 # modified environment variables
-export PWD='/home/xxx/LidarDronevoid/build'
+export CMAKE_PREFIX_PATH="/home/jane/lidardrone/devel:$CMAKE_PREFIX_PATH"
+export PWD='/home/jane/lidardrone/build'
+export ROSLISP_PACKAGE_DIRECTORIES='/home/jane/lidardrone/devel/share/common-lisp'
+export ROS_PACKAGE_PATH="/home/jane/lidardrone/src:$ROS_PACKAGE_PATH"

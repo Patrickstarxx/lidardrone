@@ -67,14 +67,14 @@ set(rosmsg_tcp_bridge_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(rosmsg_tcp_bridge_SOURCE_PREFIX /home/xxx/LidarDronevoid/src/planner/planner/rosmsg_tcp_bridge)
-  set(rosmsg_tcp_bridge_DEVEL_PREFIX /home/xxx/LidarDronevoid/devel)
+  set(rosmsg_tcp_bridge_SOURCE_PREFIX /home/jane/lidardrone/src/planner/planner/rosmsg_tcp_bridge)
+  set(rosmsg_tcp_bridge_DEVEL_PREFIX /home/jane/lidardrone/devel)
   set(rosmsg_tcp_bridge_INSTALL_PREFIX "")
   set(rosmsg_tcp_bridge_PREFIX ${rosmsg_tcp_bridge_DEVEL_PREFIX})
 else()
   set(rosmsg_tcp_bridge_SOURCE_PREFIX "")
   set(rosmsg_tcp_bridge_DEVEL_PREFIX "")
-  set(rosmsg_tcp_bridge_INSTALL_PREFIX /home/xxx/LidarDronevoid/install)
+  set(rosmsg_tcp_bridge_INSTALL_PREFIX /home/jane/lidardrone/install)
   set(rosmsg_tcp_bridge_PREFIX ${rosmsg_tcp_bridge_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/xxx/LidarDronevoid/install/lib;/home/xxx/LidarDronevoid/devel/lib;/opt/ros/noetic/lib)
+    foreach(path /home/jane/lidardrone/install/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

@@ -1,8 +1,8 @@
-# Install script for directory: /home/xxx/LidarDronevoid/src/planner/planner/plan_manage
+# Install script for directory: /home/jane/lidardrone/src/planner/planner/plan_manage
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/xxx/LidarDronevoid/install")
+  set(CMAKE_INSTALL_PREFIX "/home/jane/lidardrone/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,17 +38,17 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/xxx/LidarDronevoid/build/planner/planner/plan_manage/catkin_generated/installspace/ego_planner.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/jane/lidardrone/build/planner/planner/plan_manage/catkin_generated/installspace/ego_planner.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ego_planner/cmake" TYPE FILE FILES
-    "/home/xxx/LidarDronevoid/build/planner/planner/plan_manage/catkin_generated/installspace/ego_plannerConfig.cmake"
-    "/home/xxx/LidarDronevoid/build/planner/planner/plan_manage/catkin_generated/installspace/ego_plannerConfig-version.cmake"
+    "/home/jane/lidardrone/build/planner/planner/plan_manage/catkin_generated/installspace/ego_plannerConfig.cmake"
+    "/home/jane/lidardrone/build/planner/planner/plan_manage/catkin_generated/installspace/ego_plannerConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ego_planner" TYPE FILE FILES "/home/xxx/LidarDronevoid/src/planner/planner/plan_manage/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ego_planner" TYPE FILE FILES "/home/jane/lidardrone/src/planner/planner/plan_manage/package.xml")
 endif()
 

@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/xxx/LidarDronevoid/src
+CMAKE_SOURCE_DIR = /home/jane/lidardrone/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/xxx/LidarDronevoid/build
+CMAKE_BINARY_DIR = /home/jane/lidardrone/build
 
 # Utility rule file for sensor_msgs_generate_messages_cpp.
 
@@ -63,10 +63,10 @@ planner/planner/plan_env/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build:
 .PHONY : planner/planner/plan_env/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build
 
 planner/planner/plan_env/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/clean:
-	cd /home/xxx/LidarDronevoid/build/planner/planner/plan_env && $(CMAKE_COMMAND) -P CMakeFiles/sensor_msgs_generate_messages_cpp.dir/cmake_clean.cmake
+	cd /home/jane/lidardrone/build/planner/planner/plan_env && $(CMAKE_COMMAND) -P CMakeFiles/sensor_msgs_generate_messages_cpp.dir/cmake_clean.cmake
 .PHONY : planner/planner/plan_env/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/clean
 
 planner/planner/plan_env/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/depend:
-	cd /home/xxx/LidarDronevoid/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/xxx/LidarDronevoid/src /home/xxx/LidarDronevoid/src/planner/planner/plan_env /home/xxx/LidarDronevoid/build /home/xxx/LidarDronevoid/build/planner/planner/plan_env /home/xxx/LidarDronevoid/build/planner/planner/plan_env/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/jane/lidardrone/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jane/lidardrone/src /home/jane/lidardrone/src/planner/planner/plan_env /home/jane/lidardrone/build /home/jane/lidardrone/build/planner/planner/plan_env /home/jane/lidardrone/build/planner/planner/plan_env/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : planner/planner/plan_env/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/depend
 

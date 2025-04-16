@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/xxx/LidarDronevoid/devel/lib/rosmsg_tcp_bridge/bridge_node"
-  "/home/xxx/LidarDronevoid/devel/lib/rosmsg_tcp_bridge/bridge_node.pdb"
+  "/home/jane/lidardrone/devel/lib/rosmsg_tcp_bridge/bridge_node"
+  "/home/jane/lidardrone/devel/lib/rosmsg_tcp_bridge/bridge_node.pdb"
   "CMakeFiles/bridge_node.dir/src/bridge_node.cpp.o"
 )
 

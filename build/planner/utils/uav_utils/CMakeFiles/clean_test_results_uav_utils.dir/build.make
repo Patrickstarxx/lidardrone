@@ -46,10 +46,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/xxx/LidarDronevoid/src
+CMAKE_SOURCE_DIR = /home/jane/lidardrone/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/xxx/LidarDronevoid/build
+CMAKE_BINARY_DIR = /home/jane/lidardrone/build
 
 # Utility rule file for clean_test_results_uav_utils.
 
@@ -57,7 +57,7 @@ CMAKE_BINARY_DIR = /home/xxx/LidarDronevoid/build
 include planner/utils/uav_utils/CMakeFiles/clean_test_results_uav_utils.dir/progress.make
 
 planner/utils/uav_utils/CMakeFiles/clean_test_results_uav_utils:
-	cd /home/xxx/LidarDronevoid/build/planner/utils/uav_utils && /usr/bin/python3 /opt/ros/noetic/share/catkin/cmake/test/remove_test_results.py /home/xxx/LidarDronevoid/build/test_results/uav_utils
+	cd /home/jane/lidardrone/build/planner/utils/uav_utils && /usr/bin/python3 /opt/ros/noetic/share/catkin/cmake/test/remove_test_results.py /home/jane/lidardrone/build/test_results/uav_utils
 
 clean_test_results_uav_utils: planner/utils/uav_utils/CMakeFiles/clean_test_results_uav_utils
 clean_test_results_uav_utils: planner/utils/uav_utils/CMakeFiles/clean_test_results_uav_utils.dir/build.make
@@ -70,10 +70,10 @@ planner/utils/uav_utils/CMakeFiles/clean_test_results_uav_utils.dir/build: clean
 .PHONY : planner/utils/uav_utils/CMakeFiles/clean_test_results_uav_utils.dir/build
 
 planner/utils/uav_utils/CMakeFiles/clean_test_results_uav_utils.dir/clean:
-	cd /home/xxx/LidarDronevoid/build/planner/utils/uav_utils && $(CMAKE_COMMAND) -P CMakeFiles/clean_test_results_uav_utils.dir/cmake_clean.cmake
+	cd /home/jane/lidardrone/build/planner/utils/uav_utils && $(CMAKE_COMMAND) -P CMakeFiles/clean_test_results_uav_utils.dir/cmake_clean.cmake
 .PHONY : planner/utils/uav_utils/CMakeFiles/clean_test_results_uav_utils.dir/clean
 
 planner/utils/uav_utils/CMakeFiles/clean_test_results_uav_utils.dir/depend:
-	cd /home/xxx/LidarDronevoid/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/xxx/LidarDronevoid/src /home/xxx/LidarDronevoid/src/planner/utils/uav_utils /home/xxx/LidarDronevoid/build /home/xxx/LidarDronevoid/build/planner/utils/uav_utils /home/xxx/LidarDronevoid/build/planner/utils/uav_utils/CMakeFiles/clean_test_results_uav_utils.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/jane/lidardrone/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jane/lidardrone/src /home/jane/lidardrone/src/planner/utils/uav_utils /home/jane/lidardrone/build /home/jane/lidardrone/build/planner/utils/uav_utils /home/jane/lidardrone/build/planner/utils/uav_utils/CMakeFiles/clean_test_results_uav_utils.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : planner/utils/uav_utils/CMakeFiles/clean_test_results_uav_utils.dir/depend
 
