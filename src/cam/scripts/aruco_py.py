@@ -27,8 +27,8 @@ class ArucoDroneLanding:
         
         # 设置相机内参（这里假设默认值，实际应用中需要根据你的摄像头进行校准）
         self.image_center = (240, 320)  # 图像中心 (cx, cy)
-        self.fx=376.95550496;
-        self.fy=375.83052548;
+        self.fx=376.95550496
+        self.fy=375.83052548
         self.camera_matrix = np.array([ [341.91275249, 0, 326.11605895],
         				                [0, 341.07830571, 240.98064699],
     	        			            [0, 0, 1]], dtype=np.float32)

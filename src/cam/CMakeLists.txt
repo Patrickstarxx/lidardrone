@@ -26,6 +26,7 @@ include_directories(
 install(PROGRAMS
   scripts/camera_error_publisher.py  # 确保你的Python脚本放在项目src目录下
   scripts/cam_target_distpub.py  # 确保你的Python脚本放在项目src目录下
+  scripts/aruco_det.py
   scripts/aruco_py.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )

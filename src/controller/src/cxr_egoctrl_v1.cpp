@@ -235,10 +235,12 @@ void Ctrl::control(const ros::TimerEvent&)
             else
             {
                 ROS_INFO("摄像头目标");
-                double x_error = 0 - cam_target.x;
-                double y_error = 0 - cam_target.y;
+                double x_error = cam_target.x;
+                double y_error = cam_target.y;
                 current_goal.velocity.x = pid_calculate(x_error, kp, ki, kd, max_speed, integral, prev_error, dt ); 
                 current_goal.velocity.y = pid_calculate(y_error, kp, ki, kd, max_speed, integral, prev_error, dt ); 
+                ROS_INFO("current_goal.velocity.x =%f",current_goal.velocity.x );
+                ROS_INFO("current_goal.velocity.y =%f",current_goal.velocity.y );
                 current_goal.velocity.z = 0;
     
                 current_goal.yaw = now_yaw;

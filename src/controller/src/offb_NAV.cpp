@@ -71,6 +71,7 @@ void local_pos_cb(const geometry_msgs::PoseStamped::ConstPtr& msg)
 void rviz_goal_cb(const geometry_msgs::PoseStampedPtr &msg)
 {
 	rviz_goal = *msg;
+	rviz_goal.pose.position.z=1.2;//2D NAV GOAL发布的导航点默认高度为0，手动赋值避免贴地飞行
    // 更新时间戳为当前时间
    rviz_goal.header.stamp = ros::Time::now();
 
@@ -245,7 +246,7 @@ int main(int argc, char **argv)
 	ros::Time last_request = ros::Time::now();
 
 	ros::Subscriber cam_target_sub = nh.subscribe<geometry_msgs::Vector3>
-			("/camera_displacement", 10, cam_target_cb);
+			("/aruco_horizontal_distance", 10, cam_target_cb);
     // 订阅无人机当前状态 
     ros::Subscriber state_sub = nh.subscribe<mavros_msgs::State>
             ("mavros/state", 10, state_cb);
@@ -350,7 +351,7 @@ int main(int argc, char **argv)
 			nav_wypt_mode_pb.publish(NWM);
 			ROS_INFO("CAM.x=%f",cam_target.x);
 			ROS_INFO("CAM.y=%f",cam_target.y);
-			if(abs(cam_target.x)<=0.2 && abs(cam_target.y)<=0.2)
+			if(abs(cam_target.x)<=0.05 && abs(cam_target.y)<=0.05)
 			{
 				//NWTS.nav_waypoint_type_switch = NWTS.NAV_WYPT_PRESET;
 				ROS_WARN("CAM_ATRGET REACHED");
