@@ -89,7 +89,7 @@ Ctrl::Ctrl()
     position_sub=nh.subscribe("/mavros/local_position/odom", 10, &Ctrl::position_cb, this);
     target_sub = nh.subscribe("move_base_simple/goal", 10, &Ctrl::target_cb, this);
     twist_sub = nh.subscribe("/position_cmd", 10, &Ctrl::twist_cb, this);
-    cam_target_sub = nh.subscribe<geometry_msgs::Vector3>("/camera_displacement", 1, &Ctrl::cam_target_cb, this);
+    cam_target_sub = nh.subscribe<geometry_msgs::Vector3>("/aruco_relative_position", 1, &Ctrl::cam_target_cb, this);
     nav_wypt_mode_sub = nh.subscribe("/nav_waypoint/wypt_type", 1, &Ctrl::nav_mode_cb, this);
     local_pos_pub = nh.advertise<mavros_msgs::PositionTarget>("/mavros/setpoint_raw/local", 1);
     pubMarker = nh.advertise<visualization_msgs::Marker>("/track_drone_point", 5);
@@ -202,8 +202,11 @@ void Ctrl::control(const ros::TimerEvent&)
             ROS_INFO("无有效导航点，保持悬停\n");
         break;
         case NAV_MODE.TRAJ_TRACK:
+        {
+            ROS_INFO("TRJ");
             if(have_ego==true)
             {
+                
                 current_goal.coordinate_frame = mavros_msgs::PositionTarget::FRAME_LOCAL_NED;//选择local系，一定要local系
                 current_goal.header.stamp = ros::Time::now();
                 current_goal.type_mask = velocity_mask;//这个就算对应的掩码设置，可以看mavros_msgs::PositionTarget消息格式
@@ -216,9 +219,11 @@ void Ctrl::control(const ros::TimerEvent&)
                     current_goal.yaw = now_yaw;
                 ROS_INFO("已触发控制器，当前EGO规划速度：velocity = %.2f\n", sqrt(pow(current_goal.velocity.x, 2)+pow(current_goal.velocity.y, 2)));
             }
+        }
         break;
         case NAV_MODE.CAM_TARGET:
         {
+            ROS_INFO("CAM");
             current_goal.coordinate_frame = mavros_msgs::PositionTarget::FRAME_LOCAL_NED;//选择local系，一定要local系
             current_goal.header.stamp = ros::Time::now();
             current_goal.type_mask = velocity_mask;//这个就算对应的掩码设置，可以看mavros_msgs::PositionTarget消息格式
@@ -247,7 +252,7 @@ void Ctrl::control(const ros::TimerEvent&)
                 //have_cam = false;
             }
         
-            if ((ros::Time::now() - last_cam_time).toSec() > 0.1) 
+            if ((ros::Time::now() - last_cam_time).toSec() > 0.5) 
             { // 0.1秒无数据视为丢失
                 have_cam = false;
             }

@@ -4,17 +4,37 @@
     - header:
         frame_id: "map"
       pose:
-        position: {x: 1.0, y: 0.0, z: 1.6}
+        position: {x: 0.0, y: -1.0, z: 1.5}
         orientation: {x: 0.0, y: 0.0, z: 0.0, w: 1.0}
     - header:
         frame_id: "map"
       pose:
-        position: {x: 1.0, y: 1.0, z: 1.7}
+        position: {x: 1.5, y: -1.0, z: 1.7}
         orientation: {x: 0.0, y: 0.0, z: 0.0, w: 1.0}
     - header:
         frame_id: "map"
       pose:
-        position: {x: -1.5, y: -1.5, z: 1.3}
+        position: {x: 1.5, y: 0.0, z: 1.3}
+        orientation: {x: 0.0, y: 0.0, z: 0.0, w: 1.0}
+    - header:
+        frame_id: "map"
+      pose:
+        position: {x: 1.5, y: 1.0, z: 1.3}
+        orientation: {x: 0.0, y: 0.0, z: 0.0, w: 1.0}
+    - header:
+        frame_id: "map"
+      pose:
+        position: {x: 1.5, y: 1.5, z: 1.3}
+        orientation: {x: 0.0, y: 0.0, z: 0.0, w: 1.0}
+    - header:
+        frame_id: "map"
+      pose:
+        position: {x: 0.0, y: 1.5, z: 1.3}
+        orientation: {x: 0.0, y: 0.0, z: 0.0, w: 1.0}
+    - header:
+        frame_id: "map"
+      pose:
+        position: {x: 0.0, y: 0, z: 1.5}
         orientation: {x: 0.0, y: 0.0, z: 0.0, w: 1.0}
   </rosparam>
     <!-- 加载预设导航点 -->

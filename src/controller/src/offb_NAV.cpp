@@ -246,7 +246,7 @@ int main(int argc, char **argv)
 	ros::Time last_request = ros::Time::now();
 
 	ros::Subscriber cam_target_sub = nh.subscribe<geometry_msgs::Vector3>
-			("/aruco_horizontal_distance", 10, cam_target_cb);
+			("/aruco_relative_position", 10, cam_target_cb);
     // 订阅无人机当前状态 
     ros::Subscriber state_sub = nh.subscribe<mavros_msgs::State>
             ("mavros/state", 10, state_cb);
@@ -304,6 +304,7 @@ int main(int argc, char **argv)
 		switch (NWTS.nav_waypoint_type_switch)
 		{
 		case NWTS.NAV_WYPT_PRESET: 
+			ROS_INFO("PRESET");
 			NWM.nav_mode = NWM.TRAJ_TRACK;
 			nav_wypt_mode_pb.publish(NWM);//设置导航模式
 			//if(!mission_start || goalReached(_WayPoints) )//|| goalReached(rviz_goal))
@@ -347,6 +348,7 @@ int main(int argc, char **argv)
 			NWTS.nav_waypoint_type_switch=NWTS.NAV_WYPT_PRESET;//回到预设导航点模式
 			break;
 		case NWTS.NAV_WYPT_CAM://摄像头目标
+			
 			NWM.nav_mode = NWM.CAM_TARGET;
 			nav_wypt_mode_pb.publish(NWM);
 			ROS_INFO("CAM.x=%f",cam_target.x);
