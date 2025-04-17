@@ -14,8 +14,8 @@ find_package(catkin REQUIRED COMPONENTS
 )
 
 catkin_package(
-  INCLUDE_DIRS include
-  CATKIN_DEPENDS roscpp rospy geometry_msgs std_msgs
+  #INCLUDE_DIRS include
+  #CATKIN_DEPENDS roscpp rospy geometry_msgs std_msgs
 )
 
 include_directories(
