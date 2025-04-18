@@ -356,7 +356,7 @@ int main(int argc, char **argv)
 			if(abs(cam_target.x)<=0.05 && abs(cam_target.y)<=0.05)
 			{
 				//NWTS.nav_waypoint_type_switch = NWTS.NAV_WYPT_PRESET;
-				ROS_WARN("CAM_ATRGET REACHED");
+				ROS_WARN("CAM_TARGET REACHED");
 				cam_target_reached=true;
 				NWTS.nav_waypoint_type_switch = NWTS.NAV_WYPT_LAND;
 			}
