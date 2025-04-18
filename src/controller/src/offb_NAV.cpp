@@ -47,6 +47,7 @@ geometry_msgs::PoseStamped local_pos;
 geometry_msgs::PoseStamped home_pos;
 
 geometry_msgs::Vector3 cam_target;
+geometry_msgs::PoseStamped dog_target;//机器狗目标
 
 //订阅无人机状态
 void state_cb(const mavros_msgs::State::ConstPtr& msg)
@@ -258,6 +259,9 @@ int main(int argc, char **argv)
 	// 创建目标点发布话题
 	ros::Publisher setpoint_pub = nh.advertise<mavros_msgs::PositionTarget>
 			("/mavros/setpoint_raw/local",10);
+	//机器狗目标
+	ros::Publisher dog_pub = nh.advertise<mavros_msgs::PositionTarget>
+			("/dog_target",10);
     // 服务的客户端（设定无人机的模式、状态）
     ros::ServiceClient arming_client = nh.serviceClient<mavros_msgs::CommandBool>
             ("mavros/cmd/arming");
@@ -358,7 +362,10 @@ int main(int argc, char **argv)
 				//NWTS.nav_waypoint_type_switch = NWTS.NAV_WYPT_PRESET;
 				ROS_WARN("CAM_TARGET REACHED");
 				cam_target_reached=true;
-				NWTS.nav_waypoint_type_switch = NWTS.NAV_WYPT_LAND;
+				NWTS.nav_waypoint_type_switch = NWTS.NAV_WYPT_PRESET;
+				dog_target.pose.position.x=-cam_target.x+local_pos.pose.position.x;
+				dog_target.pose.position.y=-cam_target.y+local_pos.pose.position.y;
+				dog_pub.publish(dog_target);
 			}
 		break;
 		case NWTS.NAV_WYPT_LAND:   // 降落
