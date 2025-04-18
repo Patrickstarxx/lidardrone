@@ -28,10 +28,10 @@ class ArucoLandingSystem:
 
         # 坐标系配置
         self.R_cam_to_body = np.array([
-            [1, 0, 0],
             [0, -1, 0],
+            [-1, 0, 0],
             [0, 0, -1]])
-        self.T_cam_to_body = np.array([0.0, 0.0, -0.1])
+        self.T_cam_to_body = np.array([0.0, 0.0, -0.05])
 
         # ROS配置
         self.pose_sub = rospy.Subscriber('/mavros/local_position/pose', PoseStamped, self.pose_callback)

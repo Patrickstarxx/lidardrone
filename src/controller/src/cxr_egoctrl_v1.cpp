@@ -28,10 +28,10 @@
 bool allow_yaw = false;//如果不想要机头转动，则把这个设置为false，专门适配于雷达用的
 bool have_cam = false;//检测摄像头信号
 static ros::Time last_cam_time;
-const double kp = 0.1;        // 比例系数
-const double ki = 0.03;       // 积分系数
-const double kd = 0.07;        // 微分系数
-const double max_speed = 1.0; // 最大速度
+const double kp = 0.06;        // 比例系数
+const double ki = 0.01;       // 积分系数
+const double kd = 0.05;        // 微分系数
+const double max_speed = 0.5; // 最大速度
 float dt=0.02; //运行时间
 double integral = 0.0;    // 积分项
 double prev_error = 0.0;  // 上次误差
@@ -80,7 +80,7 @@ class Ctrl
         ros::Timer timer;
         
         mavros_msgs::SetMode offb_set_mode;
-        //mavros_msgs::State current_state;
+        
 };
 Ctrl::Ctrl()
 {
@@ -252,13 +252,10 @@ void Ctrl::control(const ros::TimerEvent&)
                 //have_cam = false;
             }
         
-            if ((ros::Time::now() - last_cam_time).toSec() > 0.5) 
+            if ((ros::Time::now() - last_cam_time).toSec() > 0.2) 
             { // 0.1秒无数据视为丢失
                 have_cam = false;
             }
-            ROS_INFO("vel.x=%f",current_goal.velocity.x);
-            ROS_INFO("vel.y=%f",current_goal.velocity.y);
-            
 
         }
         break;
