@@ -29,6 +29,7 @@ int num_cnt_=0;
 int test_=5;
 bool takeoff_done=false;
 bool cam_target_reached=false;
+static ros::Time last_cam_time;
 
 size_t wypt_current_index_ = 0;
 bool mission_start=false;
@@ -232,6 +233,7 @@ void local_vel_cb(const geometry_msgs::TwistStamped::ConstPtr& msg)
 void cam_target_cb(const geometry_msgs::Vector3::ConstPtr& msg)
 {
 	cam_target = *msg;
+	last_cam_time = ros::Time::now();
 	if(!cam_target_reached && takeoff_done )
 	{
 		NWTS.nav_waypoint_type_switch = NWTS.NAV_WYPT_CAM;
@@ -367,6 +369,10 @@ int main(int argc, char **argv)
 				dog_target.pose.position.y=-cam_target.y+local_pos.pose.position.y;
 				dog_pub.publish(dog_target);
 			}
+			if ((ros::Time::now() - last_cam_time).toSec() > 0.5) 
+            { // 0.5秒无数据视为丢失
+                NWTS.nav_waypoint_type_switch = NWTS.NAV_WYPT_PRESET;
+            }
 		break;
 		case NWTS.NAV_WYPT_LAND:   // 降落
 			ROS_WARN("LANDING");
