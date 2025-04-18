@@ -175,7 +175,7 @@ void Ctrl::control(const ros::TimerEvent&)
     if(!FCUready())
     {
         std::cout<<"---------------FCU NOT READY!!-------------"<<std::endl;
-        //NAV_MODE.nav_mode=NAV_MODE::NAV_MODE_EMPTY;
+
         current_goal.coordinate_frame = mavros_msgs::PositionTarget::FRAME_LOCAL_NED;
         current_goal.header.stamp = ros::Time::now();
         current_goal.type_mask = velocity_mask;
@@ -187,7 +187,7 @@ void Ctrl::control(const ros::TimerEvent&)
         local_pos_pub.publish(current_goal); 
         return;
     }
-    //NAV_MODE.nav_mode= NAV_MODE.CAM_TARGET;//调试
+
     switch (NAV_MODE.nav_mode)
     {
         
@@ -303,17 +303,17 @@ bool Ctrl::FCUready()
 {
     if(!current_state.connected)
     {
-        ROS_INFO("FCU NOT CONECTED");
+        //ROS_INFO("FCU NOT CONECTED");
         return false;
     }
     if(current_state.mode != "OFFBOARD")
     {
-        ROS_INFO("NOT IN OFFBOARD");
+        //ROS_INFO("NOT IN OFFBOARD");
         return false;
     }
     if(!current_state.armed)
     {
-        ROS_INFO("NOT ARMED");        
+        //ROS_INFO("NOT ARMED");        
         return false;
     }
     else

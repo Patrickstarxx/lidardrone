@@ -19,7 +19,7 @@ class ArucoLandingSystem:
         self.dist_coeffs = np.array([-0.0032, 0.0714, -0.0003, 0.0018, 0.0])
 
         # ArUco参数
-        self.marker_length = 0.03
+        self.marker_length = 0.13
         self.aruco_dict = cv2.aruco.getPredefinedDictionary(cv2.aruco.DICT_4X4_50)
         self.detector = cv2.aruco.ArucoDetector(
             self.aruco_dict,
