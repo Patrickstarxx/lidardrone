@@ -80,15 +80,15 @@ class ArucoLandingSystem:
                     world_pos = self.calculate_relative_position(tvec_cam)
 
                     msg = Vector3()
-                    msg.x = -world_pos[0]
-                    msg.y = -world_pos[1]
+                    msg.x = world_pos[0]
+                    msg.y = world_pos[1]
                     msg.z = self.current_pose.position.z
                     self.pos_pub.publish(msg)
 
                     cv2.aruco.drawDetectedMarkers(frame, corners)
                     cv2.drawFrameAxes(frame, self.camera_matrix, self.dist_coeffs, rvec, tvec, 0.1)
-                    cv2.putText(frame, f"X:{-world_pos[0]:.2f}m", (10,30), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0,255,0), 2)
-                    cv2.putText(frame, f"Y:{-world_pos[1]:.2f}m", (10,60), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0,255,0), 2)
+                    cv2.putText(frame, f"X:{world_pos[0]:.2f}m", (10,30), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0,255,0), 2)
+                    cv2.putText(frame, f"Y:{world_pos[1]:.2f}m", (10,60), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0,255,0), 2)
 
             cv2.imshow('ArUco Detection', frame)
             if cv2.waitKey(1) & 0xFF == ord('q'):
