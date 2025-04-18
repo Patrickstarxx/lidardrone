@@ -28,6 +28,7 @@ install(PROGRAMS
   scripts/cam_target_distpub.py  # 确保你的Python脚本放在项目src目录下
   scripts/aruco_det.py
   scripts/aruco_py.py
+  scripts/aruco_img.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 add_executable(aruco_detect src/aruco_detect.cpp)
