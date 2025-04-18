@@ -1,0 +1,1 @@
+rosrun controller rviz.launch;
