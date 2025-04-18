@@ -19,7 +19,7 @@ class ArucoLandingSystem:
         self.dist_coeffs = np.array([-0.0032, 0.0714, -0.0003, 0.0018, 0.0])
 
         # ArUco参数
-        self.marker_length = 0.2
+        self.marker_length = 0.03
         self.aruco_dict = cv2.aruco.getPredefinedDictionary(cv2.aruco.DICT_4X4_50)
         self.detector = cv2.aruco.ArucoDetector(
             self.aruco_dict,
@@ -31,7 +31,7 @@ class ArucoLandingSystem:
             [0, -1, 0],
             [-1, 0, 0],
             [0, 0, -1]])
-        self.T_cam_to_body = np.array([0.0, 0.0, -0.05])
+        self.T_cam_to_body = np.array([0.06, -0.05, 0.0])
 
         # ROS配置
         self.pose_sub = rospy.Subscriber('/mavros/local_position/pose', PoseStamped, self.pose_callback)
@@ -61,7 +61,7 @@ class ArucoLandingSystem:
     def run(self):
         while not rospy.is_shutdown():
             ret, frame = self.cap.read()
-            frame=cv2.rotate(frame,cv2.ROTATE_180)
+            frame=cv2.rotate(frame,cv2.ROTATE_90_COUNTERCLOCKWISE)
             if not ret:
                 continue
 
