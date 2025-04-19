@@ -8,7 +8,7 @@ import tf.transformations as tf_trans
 from geometry_msgs.msg import PoseStamped, Vector3
 from sensor_msgs.msg import Image
 from cv_bridge import CvBridge
-from msg import ArucoMarkerArray, ArucoMarker  # 自定义消息
+from msg.msg import ArucoMarkerArray, ArucoMarker  # 自定义消息
 
 class ArucoLandingSystem:
     def __init__(self):
@@ -109,6 +109,7 @@ class ArucoLandingSystem:
 
             # 发布消息
             self.markers_pub.publish(marker_array)
+            #rospy.logerr("发布")
             
             # 发布图像
             try:

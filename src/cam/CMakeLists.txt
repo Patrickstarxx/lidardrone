@@ -11,12 +11,14 @@ find_package(catkin REQUIRED COMPONENTS
   std_msgs
   OpenCV
   cv_bridge
+  msg
 )
 
 
 catkin_package(
   #INCLUDE_DIRS include
   #CATKIN_DEPENDS roscpp rospy geometry_msgs std_msgs
+  CATKIN_DEPENDS msg
 )
 
 include_directories(

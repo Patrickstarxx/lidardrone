@@ -216,5 +216,5 @@ target_link_libraries(offb_NAV ${catkin_LIBRARIES})
 add_executable(cxr_egoctrl_v1 src/cxr_egoctrl_v1.cpp)
 target_link_libraries(cxr_egoctrl_v1 ${catkin_LIBRARIES})
 
-add_executable(_test src/_test.cpp)
-target_link_libraries(_test ${catkin_LIBRARIES})
+add_executable(a_test src/a_test.cpp)
+target_link_libraries(a_test ${catkin_LIBRARIES})

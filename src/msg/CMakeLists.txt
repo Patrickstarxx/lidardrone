@@ -53,8 +53,8 @@ find_package(catkin REQUIRED COMPONENTS
  	FILES
 	NAV_WYPT_MODE.msg
 	NAV_WYPT_TYPE_SWITCH.msg
-  ArucoMarker.msg
-  ArucoMarkerArray.msg
+  	ArucoMarker.msg
+  	ArucoMarkerArray.msg
  )
 
 ## Generate services in the 'srv' folder
