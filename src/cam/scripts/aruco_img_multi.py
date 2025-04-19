@@ -94,11 +94,11 @@ class ArucoLandingSystem:
                     marker.id = int(ids[i][0])
                     marker.position.x = world_pos[0]
                     marker.position.y = world_pos[1]
-                    marker.position.z = self.current_pose.position.z
+                    marker.position.z = self.current_pose.position.z-world_pos[3]
                     marker_array.markers.append(marker)
 
                     # 可视化
-                    cv2.aruco.drawDetectedMarkers(frame, corners,)
+                    cv2.aruco.drawDetectedMarkers(frame, corners, ids)
                     cv2.drawFrameAxes(frame, self.camera_matrix, self.dist_coeffs, rvec, tvec, 0.1)
                     cv2.putText(frame, f"ID:{ids[i][0]}", (10, 30+30*i), 
                               cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0,255,0), 2)

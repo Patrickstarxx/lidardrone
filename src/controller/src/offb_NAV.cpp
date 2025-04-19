@@ -8,9 +8,12 @@
 #include <mavros_msgs/PositionTarget.h>
 #include <mavros_msgs/ParamSet.h>
 
+#include <std_msgs/Bool.h>
 #include <vector>
 #include<msg/NAV_WYPT_TYPE_SWITCH.h>
 #include<msg/NAV_WYPT_MODE.h>
+#include<msg/ArucoMarkerArray.h>
+#include<msg/ArucoMarker.h>
 
 #include <XmlRpcValue.h>
 #include <XmlRpcException.h>
@@ -20,6 +23,7 @@
 #include <termios.h>    // Linux终端控制
 #include <unistd.h>
 #include <fcntl.h>
+#include <unordered_map>
 bool goalmaunlreach_flag=false;
 bool goalmanulreached=false;
 double tolerance=0.2;//设置容差
@@ -29,6 +33,7 @@ int num_cnt_=0;
 int test_=5;
 bool takeoff_done=false;
 bool cam_target_reached=false;
+bool is_target_hit = false;
 static ros::Time last_cam_time;
 
 size_t wypt_current_index_ = 0;
@@ -49,7 +54,7 @@ geometry_msgs::PoseStamped home_pos;
 
 geometry_msgs::Vector3 cam_target;
 geometry_msgs::PoseStamped dog_target;//机器狗目标
-
+std::unordered_map<int, geometry_msgs::Vector3> marker_map;  
 //订阅无人机状态
 void state_cb(const mavros_msgs::State::ConstPtr& msg)
 {
@@ -240,6 +245,29 @@ void cam_target_cb(const geometry_msgs::Vector3::ConstPtr& msg)
 	}
 	
 }
+void cam_target_multi_cb(const msg::ArucoMarkerArray::ConstPtr& msg)
+{
+	// 构建ID-位置映射
+	for(const auto& marker : msg->markers)
+	{
+		if(marker_map.find(marker.id) != marker_map.end()) 
+		{
+			ROS_WARN("检测到重重复ID: %d", marker.id);
+			continue;
+		}
+		marker_map[marker.id] = marker.position;
+		//ROS_INFO("x=%f,y=%f",marker_map[1].x,marker_map[1].y);  
+	}
+	if(!is_target_hit && takeoff_done )
+	{
+		NWTS.nav_waypoint_type_switch = NWTS.NAV_WYPT_CAM;
+	}
+	last_cam_time = ros::Time::now();
+}
+void is_target_hit_cb(const std_msgs::Bool::ConstPtr& msg)
+{
+	is_target_hit = msg->data;//机器狗返回目标打击状态：命中true/false
+}
 int main(int argc, char **argv)
 {   
     
@@ -269,7 +297,10 @@ int main(int argc, char **argv)
             ("mavros/cmd/arming");
     ros::ServiceClient set_mode_client = nh.serviceClient<mavros_msgs::SetMode>
             ("mavros/set_mode");
-
+	// 订阅摄像头多个目标
+	ros::Subscriber cam_target_multi_sub = nh.subscribe("/aruco_detection/markers", 10, cam_target_multi_cb);		
+	// 订阅目标打击状态
+	ros::Subscriber is_target_hit_sub = nh.subscribe("/target_hit", 1, is_target_hit_cb);	
 	////////////////************订阅rviz 2D_NAV_GOAL的目标点******************//////////////////////////////////////////
 	ros::Subscriber rviz_goal_sub = nh.subscribe("/move_base_simple/goal", 1, rviz_goal_cb);
 	////////////////************订阅rviz 2D_NAV_GOAL的目标点******************//////////////////////////////////////////
@@ -287,7 +318,6 @@ int main(int argc, char **argv)
     offb_set_mode.request.custom_mode = "OFFBOARD";
     mavros_msgs::CommandBool arm_cmd;
     arm_cmd.request.value = true;
-	
 
     while(ros::ok())
 	{
@@ -343,62 +373,66 @@ int main(int argc, char **argv)
 				rviz_flag=false;
 
 			}
-			break;
+		break;
 		case NWTS.NAV_WYPT_RVIZ:
-			NWM.nav_mode = NWM.TRAJ_TRACK;
-			nav_wypt_mode_pb.publish(NWM);
-			nav_goal_pb.publish(rviz_goal);//发布RVIZ导航点
-			ROS_ERROR("RVIZ");
-			IS_RVIZ_GOAL = rviz_goal.header.seq + 1;//等待下次进入
-			ROS_INFO("IS_RVIZ_=%d",IS_RVIZ_GOAL);
-			NWTS.nav_waypoint_type_switch=NWTS.NAV_WYPT_PRESET;//回到预设导航点模式
-			break;
-		case NWTS.NAV_WYPT_CAM://摄像头目标
-			
-			NWM.nav_mode = NWM.CAM_TARGET;
-			nav_wypt_mode_pb.publish(NWM);
-			ROS_INFO("CAM.x=%f",cam_target.x);
-			ROS_INFO("CAM.y=%f",cam_target.y);
-			if(abs(cam_target.x)<=0.05 && abs(cam_target.y)<=0.05)
 			{
-				//NWTS.nav_waypoint_type_switch = NWTS.NAV_WYPT_PRESET;
-				ROS_WARN("CAM_TARGET REACHED");
-				cam_target_reached=true;
-				NWTS.nav_waypoint_type_switch = NWTS.NAV_WYPT_PRESET;
-				dog_target.pose.position.x=-cam_target.x+local_pos.pose.position.x;
-				dog_target.pose.position.y=-cam_target.y+local_pos.pose.position.y;
-				dog_pub.publish(dog_target);
+				NWM.nav_mode = NWM.TRAJ_TRACK;
+				nav_wypt_mode_pb.publish(NWM);
+				nav_goal_pb.publish(rviz_goal);//发布RVIZ导航点
+				ROS_ERROR("RVIZ");
+				IS_RVIZ_GOAL = rviz_goal.header.seq + 1;//等待下次进入
+				ROS_INFO("IS_RVIZ_=%d",IS_RVIZ_GOAL);
+				NWTS.nav_waypoint_type_switch=NWTS.NAV_WYPT_PRESET;//回到预设导航点模式
 			}
-			if ((ros::Time::now() - last_cam_time).toSec() > 0.5) 
-            { // 0.5秒无数据视为丢失
-                NWTS.nav_waypoint_type_switch = NWTS.NAV_WYPT_PRESET;
-            }
+		break;
+		case NWTS.NAV_WYPT_CAM://摄像头目标
+			{
+				NWM.nav_mode = NWM.CAM_TARGET;
+				nav_wypt_mode_pb.publish(NWM);
+				//if(is_target_hit==true)
+				if(goalmanulreached==true)
+				{
+					ROS_INFO("target hit");
+					NWTS.nav_waypoint_type_switch = NWTS.NAV_WYPT_PRESET;
+				}
+				if ((ros::Time::now() - last_cam_time).toSec() > 0.5) 
+				{ // 0.5秒无数据视为丢失
+					NWTS.nav_waypoint_type_switch = NWTS.NAV_WYPT_PRESET;
+				}
+			}
 		break;
 		case NWTS.NAV_WYPT_LAND:   // 降落
-			ROS_WARN("LANDING");
-			NWM.nav_mode = NWM.LAND;
-			nav_wypt_mode_pb.publish(NWM);
-			break;
-		case NWTS.NAV_WYPT_TAKEOFF:   // 起飞
-			NWM.nav_mode = NWM.TAKEOFF;
-			nav_wypt_mode_pb.publish(NWM);
-			ROS_INFO("Taking off");
-			ROS_WARN("TAKEOFF_Z=%F",local_pos.pose.position.z);
-			if(local_pos.pose.position.z>1.4 && local_pos.pose.position.z<1.6)
-			{	ROS_INFO("TAKEOFF DONE!");
-				takeoff_done=true;
-				NWTS.nav_waypoint_type_switch=NWTS.NAV_WYPT_PRESET;
+			{
+				ROS_WARN("LANDING");
+				NWM.nav_mode = NWM.LAND;
+				nav_wypt_mode_pb.publish(NWM);
 			}
-			
+		break;
+		case NWTS.NAV_WYPT_TAKEOFF:   // 起飞
+			{
+				NWM.nav_mode = NWM.TAKEOFF;
+				nav_wypt_mode_pb.publish(NWM);
+				ROS_INFO("Taking off");
+				ROS_WARN("TAKEOFF_Z=%F",local_pos.pose.position.z);
+				if(local_pos.pose.position.z>1.4 && local_pos.pose.position.z<1.6)
+				{	
+					ROS_INFO("TAKEOFF DONE!");
+					takeoff_done=true;
+					NWTS.nav_waypoint_type_switch=NWTS.NAV_WYPT_PRESET;
+				}
+			}
 		break;
 		case NWTS.NAV_WYPT_RETURN://返回起飞点并降落
-			NWM.nav_mode = NWM.RETURN;
-			nav_wypt_mode_pb.publish(NWM);
-			if(!goalReached(home_pos,0))
 			{
-				nav_goal_pb.publish(home_pos);
-				ROS_WARN("RETURN");
+				NWM.nav_mode = NWM.RETURN;
+				nav_wypt_mode_pb.publish(NWM);
+				if(!goalReached(home_pos,0))
+				{
+					nav_goal_pb.publish(home_pos);
+					ROS_WARN("RETURN");
+				}
 			}
+
 		break;
 		default:
 			break;

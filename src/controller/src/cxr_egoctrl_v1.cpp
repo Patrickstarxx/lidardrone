@@ -239,7 +239,7 @@ void Ctrl::control(const ros::TimerEvent&)
             }
             else
             {
-                ROS_INFO("摄像头目标");
+             /* ROS_INFO("追踪摄像头目标");
                 double x_error = cam_target.x;
                 double y_error = cam_target.y;
                 current_goal.velocity.x = 0.31*pid_calculate(x_error, kp, ki, kd, max_speed, integral, prev_error, dt ); 
@@ -247,13 +247,24 @@ void Ctrl::control(const ros::TimerEvent&)
                 ROS_INFO("current_goal.velocity.x =%f",current_goal.velocity.x );
                 ROS_INFO("current_goal.velocity.y =%f",current_goal.velocity.y );
                 current_goal.velocity.z = 0;
-    
-                current_goal.yaw = now_yaw;
+                current_goal.yaw = now_yaw; */
                 //have_cam = false;
+                current_goal.type_mask =
+                mavros_msgs::PositionTarget::IGNORE_VX  |
+                mavros_msgs::PositionTarget::IGNORE_VY  |
+                mavros_msgs::PositionTarget::IGNORE_VZ  |
+                mavros_msgs::PositionTarget::IGNORE_AFX |
+                mavros_msgs::PositionTarget::IGNORE_AFY |
+                mavros_msgs::PositionTarget::IGNORE_AFZ |
+                mavros_msgs::PositionTarget::IGNORE_YAW |
+                mavros_msgs::PositionTarget::IGNORE_YAW_RATE;
+                current_goal.position.x=now_x;
+                current_goal.position.y=now_y;
+                current_goal.position.z=1.8;
             }
         
             if ((ros::Time::now() - last_cam_time).toSec() > 0.2) 
-            { // 0.1秒无数据视为丢失
+            { // 0.2秒无数据视为丢失
                 have_cam = false;
             }
 
