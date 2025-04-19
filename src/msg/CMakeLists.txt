@@ -53,6 +53,8 @@ find_package(catkin REQUIRED COMPONENTS
  	FILES
 	NAV_WYPT_MODE.msg
 	NAV_WYPT_TYPE_SWITCH.msg
+  ArucoMarker.msg
+  ArucoMarkerArray.msg
  )
 
 ## Generate services in the 'srv' folder
@@ -72,7 +74,8 @@ find_package(catkin REQUIRED COMPONENTS
 ## Generate added messages and services with any dependencies listed here
  generate_messages(
    DEPENDENCIES
-#   geometry_msgs#   mavros_msgs#   std_msgs
+   geometry_msgs
+#   mavros_msgs#   std_msgs
     std_msgs
  )
 

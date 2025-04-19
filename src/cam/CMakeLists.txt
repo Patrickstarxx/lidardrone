@@ -13,6 +13,7 @@ find_package(catkin REQUIRED COMPONENTS
   cv_bridge
 )
 
+
 catkin_package(
   #INCLUDE_DIRS include
   #CATKIN_DEPENDS roscpp rospy geometry_msgs std_msgs
@@ -29,6 +30,7 @@ install(PROGRAMS
   scripts/aruco_det.py
   scripts/aruco_py.py
   scripts/aruco_img.py
+  scripts/aruco_img_multi.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 add_executable(aruco_detect src/aruco_detect.cpp)

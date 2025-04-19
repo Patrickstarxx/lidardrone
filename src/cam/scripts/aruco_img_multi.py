@@ -6,8 +6,9 @@ import numpy as np
 import rospy
 import tf.transformations as tf_trans
 from geometry_msgs.msg import PoseStamped, Vector3
-from sensor_msgs.msg import Image, CameraInfo  # 新增Image消息类型
-from cv_bridge import CvBridge  # 新增OpenCV到ROS的图像转换器
+from sensor_msgs.msg import Image
+from cv_bridge import CvBridge
+from msg import ArucoMarkerArray, ArucoMarker  # 自定义消息
 
 class ArucoLandingSystem:
     def __init__(self):
@@ -37,13 +38,10 @@ class ArucoLandingSystem:
 
         # ROS配置
         self.pose_sub = rospy.Subscriber('/mavros/local_position/pose', PoseStamped, self.pose_callback)
-        self.pos_pub = rospy.Publisher('/aruco_relative_position', Vector3, queue_size=10)
-        
-        # 新增图像发布器
-        self.bridge = CvBridge()
+        self.markers_pub = rospy.Publisher('/aruco_detection/markers', ArucoMarkerArray, queue_size=10)  # 修改发布者
         self.image_pub = rospy.Publisher('/aruco_detection/image', Image, queue_size=1)
-        self.camera_info_pub = rospy.Publisher('/aruco_detection/camera_info', CameraInfo, queue_size=1)
-
+        
+        self.bridge = CvBridge()
         self.current_pose = PoseStamped().pose
         self.R_body = np.eye(3)
 
@@ -71,14 +69,17 @@ class ArucoLandingSystem:
             ret, frame = self.cap.read()
             frame = cv2.rotate(frame, cv2.ROTATE_90_COUNTERCLOCKWISE)
             if not ret:
-                rospy.logwarn("摄像头帧读取失败")
                 continue
 
             # ArUco检测
             corners, ids, _ = self.detector.detectMarkers(frame)
             
+            marker_array = ArucoMarkerArray()  # 创建消息数组
+            marker_array.header.stamp = rospy.Time.now()
+            
             if ids is not None:
                 for i in range(len(ids)):
+                    # 估计单个标记位姿
                     rvec, tvec, _ = cv2.aruco.estimatePoseSingleMarkers(
                         corners[i], 
                         self.marker_length,
@@ -88,37 +89,34 @@ class ArucoLandingSystem:
                     tvec_cam = tvec[0][0]
                     world_pos = self.calculate_relative_position(tvec_cam)
 
-                    msg = Vector3()
-                    msg.x = world_pos[0]
-                    msg.y = world_pos[1]
-                    msg.z = self.current_pose.position.z-world_pos[3]
-                    self.pos_pub.publish(msg)
+                    # 填充单个标记信息
+                    marker = ArucoMarker()
+                    marker.id = int(ids[i][0])
+                    marker.position.x = world_pos[0]
+                    marker.position.y = world_pos[1]
+                    marker.position.z = self.current_pose.position.z
+                    marker_array.markers.append(marker)
 
-                    cv2.aruco.drawDetectedMarkers(frame, corners, ids)
+                    # 可视化
+                    cv2.aruco.drawDetectedMarkers(frame, corners,)
                     cv2.drawFrameAxes(frame, self.camera_matrix, self.dist_coeffs, rvec, tvec, 0.1)
-                    cv2.putText(frame, f"X:{world_pos[0]:.2f}m", (10,30), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0,255,0), 2)
-                    cv2.putText(frame, f"Y:{world_pos[1]:.2f}m", (10,60), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0,255,0), 2)
-                    cv2.putText(frame, f"Z:{world_pos[3]:.2f}m", (10,90), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0,255,0), 2)
+                    cv2.putText(frame, f"ID:{ids[i][0]}", (10, 30+30*i), 
+                              cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0,255,0), 2)
+                    cv2.putText(frame, f"X:{world_pos[0]:.2f}m", (100, 30+30*i),
+                              cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0,255,0), 2)
+                    cv2.putText(frame, f"Y:{world_pos[1]:.2f}m", (250, 30+30*i),
+                              cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0,255,0), 2)
 
-            # 发布图像消息
+            # 发布消息
+            self.markers_pub.publish(marker_array)
+            
+            # 发布图像
             try:
                 ros_image = self.bridge.cv2_to_imgmsg(frame, "bgr8")
-                ros_image.header.stamp = rospy.Time.now()
-                ros_image.header.frame_id = "camera_optical_frame"
+                ros_image.header = marker_array.header
                 self.image_pub.publish(ros_image)
-   
-                # 发布相机信息
-                camera_info = CameraInfo()
-                camera_info.header = ros_image.header
-                camera_info.height = 480
-                camera_info.width = 640
-                camera_info.K = self.camera_matrix.flatten().tolist()
-                camera_info.D = self.dist_coeffs.flatten().tolist()
-                camera_info.distortion_model = "plumb_bob"
-                self.camera_info_pub.publish(camera_info)
-                
             except Exception as e:
-                rospy.logerr("图像转换失败: %s" % str(e))
+                rospy.logerr("图像转换失败: %s" % e)
 
             cv2.imshow('ArUco Detection', frame)
             if cv2.waitKey(1) & 0xFF == ord('q'):
