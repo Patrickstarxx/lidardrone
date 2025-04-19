@@ -94,7 +94,7 @@ class ArucoLandingSystem:
                     msg.z = self.current_pose.position.z
                     self.pos_pub.publish(msg)
 
-                    cv2.aruco.drawDetectedMarkers(frame, corners)
+                    cv2.aruco.drawDetectedMarkers(frame, corners, ids)
                     cv2.drawFrameAxes(frame, self.camera_matrix, self.dist_coeffs, rvec, tvec, 0.1)
                     cv2.putText(frame, f"X:{world_pos[0]:.2f}m", (10,30), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0,255,0), 2)
                     cv2.putText(frame, f"Y:{world_pos[1]:.2f}m", (10,60), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0,255,0), 2)
