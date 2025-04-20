@@ -14,7 +14,7 @@ class ArucoDroneLanding:
         # 发布二维码中心相对于相机中心的水平距离
         self.pub = rospy.Publisher('/aruco_horizontal_distance', Vector3, queue_size=10)
         # 初始化变量
-        self.h = 1
+        self.h = 0.76
         
         # 打开USB摄像头
         self.cap = cv2.VideoCapture(0)
@@ -23,14 +23,18 @@ class ArucoDroneLanding:
         if not self.cap.isOpened():
             raise IOError("Cannot open USB CAM")
         else:
-        	rospy.logerr('USB CAM is UP')
-        
+            rospy.logerr('USB CAM is UP')
         # 设置相机内参（这里假设默认值，实际应用中需要根据你的摄像头进行校准）
         self.image_center = (240, 320)  # 图像中心 (cx, cy)
-        self.fx=376.95550496
-        self.fy=375.83052548
-        self.camera_matrix = np.array([ [341.91275249, 0, 326.11605895],
-        				                [0, 341.07830571, 240.98064699],
+        # self.fx=376.95550496
+        # self.fy=375.83052548
+        # self.camera_matrix = np.array([ [341.91275249, 0, 326.11605895],
+        # 				                [0, 341.07830571, 240.98064699],
+    	#         			            [0, 0, 1]], dtype=np.float32)
+        self.fx=331.379359
+        self.fy=354.593409
+        self.camera_matrix = np.array([ [331.379359, 0, 333.489552],
+        				                [0, 354.593409, 242.838384],
     	        			            [0, 0, 1]], dtype=np.float32)
         self.dist_coeffs = np.zeros((4, 1))  # 假设畸变系数为零
         

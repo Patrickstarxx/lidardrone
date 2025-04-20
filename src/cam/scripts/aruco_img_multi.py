@@ -15,14 +15,20 @@ class ArucoLandingSystem:
         rospy.init_node('aruco_landing_system', anonymous=True)
 
         # 摄像头参数
-        self.camera_matrix = np.array([
-            [341.91,   0.0,  326.11],
-            [0.0,    341.07, 240.98],
-            [0.0,      0.0,    1.0 ]], dtype=np.float32)
-        self.dist_coeffs = np.array([-0.0032, 0.0714, -0.0003, 0.0018, 0.0])
+        # self.camera_matrix = np.array([
+        #     [341.91,   0.0,  326.11],
+        #     [0.0,    341.07, 240.98],
+        #     [0.0,      0.0,    1.0 ]], dtype=np.float32)
+        # self.dist_coeffs = np.array([-0.0032, 0.0714, -0.0003, 0.0018, 0.0])
+
+        # 摄像头参数
+        self.camera_matrix = np.array([ [331.379359, 0, 333.489552],
+        				                [0, 354.593409, 242.838384],
+    	        			            [0, 0, 1]], dtype=np.float32)
+        self.dist_coeffs = np.array(-0.170260,0.026020,-0.000239,0.001548,0.000000)
 
         # ArUco参数
-        self.marker_length = 0.13
+        self.marker_length = 0.12
         self.aruco_dict = cv2.aruco.getPredefinedDictionary(cv2.aruco.DICT_4X4_50)
         self.detector = cv2.aruco.ArucoDetector(
             self.aruco_dict,
