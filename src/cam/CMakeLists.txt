@@ -33,6 +33,8 @@ install(PROGRAMS
   scripts/aruco_py.py
   scripts/aruco_img.py
   scripts/aruco_img_multi.py
+  scripts/aruco_det_copy11111.py.py
+
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 add_executable(aruco_detect src/aruco_detect.cpp)

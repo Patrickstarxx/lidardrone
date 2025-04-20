@@ -1,6 +1,7 @@
 #include <ros/ros.h>
 #include <geometry_msgs/PoseStamped.h>
 #include <geometry_msgs/TwistStamped.h>
+#include <geometry_msgs/Vector3.h>
 
 #include <mavros_msgs/CommandBool.h>
 #include <mavros_msgs/SetMode.h>
@@ -35,6 +36,10 @@ bool takeoff_done=false;
 bool cam_target_reached=false;
 bool is_target_hit = false;
 static ros::Time last_cam_time;
+
+char ids[10];//储存aruco目标ID
+char id_index=0;
+char dog_sent=0;
 
 size_t wypt_current_index_ = 0;
 bool mission_start=false;
@@ -247,22 +252,41 @@ void cam_target_cb(const geometry_msgs::Vector3::ConstPtr& msg)
 }
 void cam_target_multi_cb(const msg::ArucoMarkerArray::ConstPtr& msg)
 {
-	// 构建ID-位置映射
-	for(const auto& marker : msg->markers)
-	{
-		if(marker_map.find(marker.id) != marker_map.end()) 
-		{
-			ROS_WARN("检测到重重复ID: %d", marker.id);
-			continue;
-		}
-		marker_map[marker.id] = marker.position;
-		//ROS_INFO("x=%f,y=%f",marker_map[1].x,marker_map[1].y);  
-	}
-	if(!is_target_hit && takeoff_done )
-	{
-		NWTS.nav_waypoint_type_switch = NWTS.NAV_WYPT_CAM;
-	}
-	last_cam_time = ros::Time::now();
+    bool any_new = false;     // 是否发现新ID
+
+    // 遍历所有检测到的标记
+    for(const auto& marker : msg->markers)
+    {
+        // 尝试查找ID
+        auto it = marker_map.find(marker.id);
+        
+        if(it == marker_map.end()) 
+        {
+            // 新ID处理流程
+            marker_map.emplace(marker.id, marker.position);  // 高效插入方式
+            ROS_INFO_STREAM("新增ID:" << marker.id 
+                          << " 坐标(" << marker.position.x 
+                          << ", " << marker.position.y << ")");
+            any_new = true;
+            ids[id_index]=marker.id;
+            ROS_INFO("index=%d",id_index);
+            ROS_INFO("ids[index]=%d",ids[id_index]);
+            id_index++;
+        }
+        else
+        {
+            // 已存在ID可选的更新逻辑
+            // it->second = marker.position;  // 如果需要更新位置
+            ROS_WARN("ID exist:%d",marker.id);
+        }
+        //ROS_INFO_STREAM("ID 44 x"<<marker_map[44].x<<" y"<<marker_map[44].y);
+
+    }
+	if(!is_target_hit && takeoff_done && any_new)
+    {
+        NWTS.nav_waypoint_type_switch = NWTS.NAV_WYPT_CAM;
+    }
+    last_cam_time = ros::Time::now();
 }
 void is_target_hit_cb(const std_msgs::Bool::ConstPtr& msg)
 {
@@ -290,7 +314,7 @@ int main(int argc, char **argv)
 	ros::Publisher setpoint_pub = nh.advertise<mavros_msgs::PositionTarget>
 			("/mavros/setpoint_raw/local",10);
 	//机器狗目标
-	ros::Publisher dog_pub = nh.advertise<mavros_msgs::PositionTarget>
+	ros::Publisher dog_pub = nh.advertise<geometry_msgs::Vector3>
 			("/dog_target",10);
     // 服务的客户端（设定无人机的模式、状态）
     ros::ServiceClient arming_client = nh.serviceClient<mavros_msgs::CommandBool>
@@ -387,18 +411,32 @@ int main(int argc, char **argv)
 		break;
 		case NWTS.NAV_WYPT_CAM://摄像头目标
 			{
-				NWM.nav_mode = NWM.CAM_TARGET;
-				nav_wypt_mode_pb.publish(NWM);
+				// NWM.nav_mode = NWM.CAM_TARGET;
+				// nav_wypt_mode_pb.publish(NWM);
+				if(dog_sent!=id_index)
+				{
+					char dog_to_send=id_index-dog_sent;
+					for(int i=0;i<dog_to_send;i++)
+					{
+						marker_map[ids[id_index-1-i]].z=ids[id_index-1-i];
+						dog_pub.publish(marker_map[ids[id_index-1-i]]);
+						dog_sent++;
+					}
+				}
+				NWTS.nav_waypoint_type_switch = NWTS.NAV_WYPT_PRESET;
 				//if(is_target_hit==true)
-				if(goalmanulreached==true)
+/* 				if(goalmanulreached==true)
 				{
 					ROS_INFO("target hit");
+					is_target_hit=true;//调试
 					NWTS.nav_waypoint_type_switch = NWTS.NAV_WYPT_PRESET;
 				}
 				if ((ros::Time::now() - last_cam_time).toSec() > 0.5) 
 				{ // 0.5秒无数据视为丢失
 					NWTS.nav_waypoint_type_switch = NWTS.NAV_WYPT_PRESET;
-				}
+					ROS_WARN("相机丢失");
+				} */
+
 			}
 		break;
 		case NWTS.NAV_WYPT_LAND:   // 降落
