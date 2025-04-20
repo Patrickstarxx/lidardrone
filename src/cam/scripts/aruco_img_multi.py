@@ -73,10 +73,10 @@ class ArucoLandingSystem:
 
             # ArUco检测
             corners, ids, _ = self.detector.detectMarkers(frame)
-            
+
             marker_array = ArucoMarkerArray()  # 创建消息数组
             marker_array.header.stamp = rospy.Time.now()
-            
+
             if ids is not None:
                 for i in range(len(ids)):
                     # 估计单个标记位姿
@@ -92,19 +92,25 @@ class ArucoLandingSystem:
                     # 填充单个标记信息
                     marker = ArucoMarker()
                     marker.id = int(ids[i][0])
-                    marker.position.x = world_pos[0]
-                    marker.position.y = world_pos[1]
-                    marker.position.z = self.current_pose.position.z-world_pos[3]
+                    marker.position.x = world_pos[0]+self.current_pose.position.x
+                    marker.position.y = world_pos[1]+self.current_pose.position.y
+                    marker.position.z = self.current_pose.position.z-world_pos[2]
                     marker_array.markers.append(marker)
 
                     # 可视化
                     cv2.aruco.drawDetectedMarkers(frame, corners, ids)
                     cv2.drawFrameAxes(frame, self.camera_matrix, self.dist_coeffs, rvec, tvec, 0.1)
+                    # cv2.putText(frame, f"ID:{ids[i][0]}", (10, 30+30*i), 
+                    #           cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0,255,0), 2)
+                    # cv2.putText(frame, f"X:{world_pos[0]:.2f}m", (100, 30+30*i),
+                    #           cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0,255,0), 2)
+                    # cv2.putText(frame, f"Y:{world_pos[1]:.2f}m", (250, 30+30*i),
+                    #           cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0,255,0), 2)
                     cv2.putText(frame, f"ID:{ids[i][0]}", (10, 30+30*i), 
                               cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0,255,0), 2)
-                    cv2.putText(frame, f"X:{world_pos[0]:.2f}m", (100, 30+30*i),
+                    cv2.putText(frame, f"X:{marker.position.x:.2f}m", (100, 30+30*i),
                               cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0,255,0), 2)
-                    cv2.putText(frame, f"Y:{world_pos[1]:.2f}m", (250, 30+30*i),
+                    cv2.putText(frame, f"Y:{marker.position.y:.2f}m", (250, 30+30*i),
                               cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0,255,0), 2)
 
             # 发布消息
